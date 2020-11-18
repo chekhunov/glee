@@ -1,6 +1,7 @@
 @import "vars"; //переменные для цвета для шрифта
 @import "fonts"; // подключение шрифтов
 @import "reset"; //сброс всех стилей
+@import "libs"; //подключение сторонних библиотек
 @import "global"; // подключение глобальных стилей типо reset.css, то что на body для сылок
 
 .header {
@@ -137,12 +138,79 @@
 }
 
 .header-slider {
+  display: table;
+  width: 100%;
+  padding-top: 220px;
+  padding-bottom: 45px;
+  background-image: url("../images/slider/ellipse-bg.png");
+  background-repeat: no-repeat;
+  background-position: 83%;
+  background-color: #fcd7b6;
+
   &__item {
-    min-height: 820px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    text-align: left;
+    display: table-cell;
+    margin-bottom: 200px;
+  }
+  &__title {
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 72px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: $title;
+    @extend %rubik-500;
+  }
+  &__descr {
+    max-width: 380px;
+    margin-bottom: 65px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #436372;
+    @extend %rubik-400;
+  }
+  &__link {
+    padding: 25px 18px 23px 25px;
+    background-color: #a3bbc8;
+    color: #fff;
+  }
+  &__link::after {
+    content: url("../images/slider/arrow-btn.svg");
+    margin-left: 60px;
+  }
+  &__img {
+    margin-top: -21%;
+    float: right;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 0 5px;
+      button {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 9px;
+        background-color: #fde3cc;
+        color: $title;
+        border: none;
+        border-radius: 50%;
+      }
+      button:focus {
+        outline: dotted var(--outline-color);
+      }
+      &.slick-active {
+        button {
+          width: 30px;
+          height: 30px;
+          font-size: 11px;
+          line-height: 9px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 }
 
