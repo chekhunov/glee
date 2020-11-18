@@ -1,0 +1,24 @@
+html,
+body{
+  height: 100%; // 1 задаем чтоб footer прижать к низу
+}
+
+body{
+  display: flex;  // 2 прижимаем footer
+  flex-direction: column; // 3 прижимаем footer
+  font-size: 16px;
+  line-height: 30px;
+  color: $default;
+  background-color: #ffffff;
+  @extend %dmsans-700;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main{
+  flex-grow: 1; // 4 для того чтоб прижать footer к низу
+}

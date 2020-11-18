@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Glee</title>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="header__top">
+
+      <a class="logo" href="#body">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="146" height="39"
+          viewBox="0 0 146 39">
+          <image width="146" height="39"
+            xlink:href="data:img/png;base64,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" />
+        </svg>
+      </a>
+
+      <div class="container">
+
+        <nav class="menu">
+
+          <ul class="menu__list">
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Home<span>+</span>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                About
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Services
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Pages<span>+</span>
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                News
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+      <div class="user-nav">
+
+        <div class="user-nav__item user-nav__item--find">
+
+          <a class="user-nav__link" href="#">
+            <img class="user-nav__img" src="images/icons/find.svg" alt="user btn icon to find">
+          </a>
+
+        </div>
+
+        <div class="user-nav__item user-nav__item--heart-cart">
+
+          <a class="user-nav__link" href="#">
+            <img class="user-nav__img" src="images/icons/heart.svg" alt="user btn icon heart">
+
+            <span class="user-nav__num">
+              0
+            </span>
+          </a>
+
+          <span class="user-nav__line"></span>
+
+          <a class="user-nav__link" href="#">
+            <img class="user-nav__img" src="images/icons/cart.svg" alt="user btn icon cart">
+
+            <span class="user-nav__num">
+              0
+            </span>
+          </a>
+
+        </div>
+
+        <button class="user-nav__btn">
+          <img class="user-nav__img" src="images/icons/btn.svg" alt="user btn icon btn">
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="header-slider">
+
+      <div class="header-slider__item" style="background-image: url(/images/slider-bg.jpg);">
+
+        <div class="slider-blog__about">
+
+          <a class="slider-blog__item-link" href="#">
+
+            <p class="slider-blog__item-title">
+              Smart and trendy
+            </p>
+
+          </a>
+
+          <p class="slider-blog__item-descr">
+            Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="header__items">
+
+      <div class="header__item header__item--support">
+
+        <p class="header__title">
+          Support 24/7.
+        </p>
+
+        <div class="header__text">
+          <p>Contact us 24 hours a day,</p>
+          <p>7 days a week.</p>
+        </div>
+
+      </div>
+
+      <div class="header__item header__item--delivery">
+
+        <div class="header__title">
+          Delivery.
+        </div>
+
+        <div class="header__text">
+          Free shipping on all US order.
+        </div>
+
+      </div>
+
+      <div class="header__item header__item--payment-secure">
+
+        <div class="header__title">
+          100% Payment secure.
+        </div>
+
+        <div class="header__text">
+          We ensure secure payment
+          with PEV.
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-top__item footer-top__contact">
+
+          <a class="logo footer-top__logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="logo">
+          </a>
+
+          <a class="footer-top__adress" href="#">
+            <span class="footer-top__upper-letters">Address</span>: 4772 Wines Lane
+            Houston, TX 77032
+          </a>
+
+          <a class="footer-top__phone" href="tel:+8323475843">
+            <span class="footer-top__upper-letters">Telephone</span>: +832-347-5843
+          </a>
+
+          <a class="footer-top__email" href="mailto:contact@Glee.com"><span
+              class="footer-top__upper-letters">Email</span>: contact@Glee.com</a>
+
+        </div>
+
+        <div class="footer-top__item footer-top__nav">
+
+          <p class="footer-top__title">
+            Services
+          </p>
+
+          <ul class="footer-top__list">
+
+            <li class="footer-top__item">
+
+              <a class="footer-top__link" href="#">
+                About us
+              </a>
+
+            </li>
+
+            <li class="footer-top__item">
+
+              <a class="footer-top__link" href="#">
+                Return Policy
+              </a>
+
+            </li>
+
+            <li class="footer-top__item">
+
+              <a class="footer-top__link" href="#">
+                Our Blog
+              </a>
+
+            </li>
+
+            <li class="footer-top__item">
+
+              <a class="footer-top__link" href="#">
+                Contact Us
+              </a>
+
+            </li>
+
+            <li class="footer-top__item">
+
+              <a class="footer-top__link" href="#">
+                Terms & Condition
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-top__item footer-top__nav">
+
+          <p class="footer-top__title">
+            Account
+          </p>
+          
+          <ul class="footer-top__list">
+          
+            <li class="footer-top__item">
+          
+              <a class="footer-top__link" href="#">
+                Your Account
+              </a>
+          
+            </li>
+          
+            <li class="footer-top__item">
+          
+              <a class="footer-top__link" href="#">
+                Checkout
+              </a>
+          
+            </li>
+          
+            <li class="footer-top__item">
+          
+              <a class="footer-top__link" href="#">
+                Login
+              </a>
+          
+            </li>
+          
+            <li class="footer-top__item">
+          
+              <a class="footer-top__link" href="#">
+                Register
+              </a>
+          
+            </li>
+          
+          </ul>
+        
+        </div>
+
+        <div class="footer-top__item footer-top__item-form">
+        
+          <p class="footer-top__title">
+            Newsletter
+          </p>
+        
+          <p class="footer-top__text">
+            Subscribe by our newsletter and get
+            update protidin.
+          </p>
+        
+          <form class="footer-top__form" action="#">
+        
+            <input class="footer-top__form-input" type="email" placeholder="Email address" required>
+        
+            <button class="footer-top__form-btn" type="submit">Subscribe</button>
+        
+          </form>
+        
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+       
+        <p class="footer-bottom__copy">
+          ©2020 CopyRight Example. All rights reserved.
+        </p>
+       
+        <nav class="footer-bottom__menu">
+       
+          <ul class="footer-bottom__list">
+
+            <li class="footer-bottom__item">
+       
+              <a class="footer-bottom__link" href="#body">
+                Home
+              </a>
+       
+            </li>
+
+            <li class="footer-bottom__item">
+       
+              <a class="footer-bottom__link" href="#">
+                About
+              </a>
+       
+            </li>
+
+            <li class="footer-bottom__item">
+       
+              <a class="footer-bottom__link" href="#">
+                Blog
+              </a>
+       
+            </li>
+
+            <li class="footer-bottom__item">
+       
+              <a class="footer-bottom__link" href="#">
+                Contact
+              </a>
+       
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="js/main.min.js"></script>
+  
+</body>
+
+</html>
