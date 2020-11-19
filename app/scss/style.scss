@@ -190,36 +190,32 @@
   }
 }
 
-.header-info{
+.header-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 45px 0;
   background-color: $bg;
-  &__item{
-    display: flex; 
+  &__item {
+    display: flex;
   }
-  &__icon{
+  &__icon {
     margin-top: 8px;
   }
-  &__inner{
+  &__inner {
     margin-left: 25px;
   }
-  &__title{
+  &__title {
     font-size: 18px;
     line-height: 40px;
     color: #414141;
   }
-  &__text{
+  &__text {
     line-height: 30px;
     color: #585858;
     @extend %dmsans-400;
   }
 }
-
-
-
-
 
 .footer-top {
   display: flex;
@@ -324,6 +320,9 @@
   }
   &__link {
     color: #7b7b7b;
+  }
+  &__link:hover {
+    color: #a3bbc8;
   }
 }
 
