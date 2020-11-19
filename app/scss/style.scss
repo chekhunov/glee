@@ -13,34 +13,6 @@
     padding: 48px 0 45px; //отступ верх и низ в хеддере
     align-items: center;
   }
-
-  &__items {
-    display: flex;
-    justify-content: space-around;
-    padding: 45px 0;
-    background-color: $bg;
-  }
-
-  &__item {
-    position: relative;
-    max-width: 280px;
-    padding-left: 76px;
-    background-image: url("../images/icons/ellipse.svg");
-    background-repeat: no-repeat;
-    background-position: 31px 32px;
-  }
-
-  &__item::before {
-    content: "";
-    position: absolute;
-    top: 6;
-    left: 0;
-    width: 49px;
-    height: 49px;
-  }
-  &__item--support::before {
-    background-image: url("../images/icons/support.svg");
-  }
 }
 
 .logo {
@@ -172,6 +144,10 @@
     padding: 25px 18px 23px 25px;
     background-color: #a3bbc8;
     color: #fff;
+    outline: dotted var(--outline-color);
+  }
+  &__link:hover {
+    background-color: #a3abc8;
   }
   &__link::after {
     content: url("../images/slider/arrow-btn.svg");
@@ -190,7 +166,7 @@
       button {
         width: 30px;
         height: 30px;
-        font-size: 11px;
+        font-size: 10px;
         line-height: 9px;
         background-color: #fde3cc;
         color: $title;
@@ -204,7 +180,7 @@
         button {
           width: 30px;
           height: 30px;
-          font-size: 11px;
+          font-size: 10px;
           line-height: 9px;
           background-color: #fff;
           border-radius: 50%;
@@ -213,6 +189,37 @@
     }
   }
 }
+
+.header-info{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 45px 0;
+  background-color: $bg;
+  &__item{
+    display: flex; 
+  }
+  &__icon{
+    margin-top: 8px;
+  }
+  &__inner{
+    margin-left: 25px;
+  }
+  &__title{
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+  &__text{
+    line-height: 30px;
+    color: #585858;
+    @extend %dmsans-400;
+  }
+}
+
+
+
+
 
 .footer-top {
   display: flex;
