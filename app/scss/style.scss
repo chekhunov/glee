@@ -30,13 +30,12 @@
   }
 
   &__item {
-    
     & + & {
-    margin-left: 33px;
+      margin-left: 33px;
     }
 
     span {
-    margin-left: 3px;
+      margin-left: 3px;
     }
   }
   &__link {
@@ -89,7 +88,6 @@
       width: 16px;
       height: 16px;
       font-size: 10px;
-      line-height: 1.7;
       text-align: center;
       background-color: #fff;
       color: $title;
@@ -119,14 +117,13 @@
 }
 
 .slider {
-  
-  &__inner{
-  width: 100%;
-  padding: 220px 0 45px;
-  background-image: url("../images/slider/ellipse-bg.png");
-  background-repeat: no-repeat;
-  background-position: 84%;
-  background-color: #fcd7b6;
+  &__inner {
+    width: 100%;
+    padding: 215px 0 45px;
+    background-image: url("../images/slider/ellipse-bg.png");
+    background-repeat: no-repeat;
+    background-position: 84% 53%;
+    background-color: #fcd7b6;
   }
   &__item {
     margin-bottom: 200px;
@@ -135,16 +132,16 @@
     max-width: 440px;
     margin-bottom: 26px;
     font-size: 72px;
-    line-height: 95%;
+    line-height: 1;
     text-transform: uppercase;
     color: $title;
     @extend %rubik-500;
   }
   &__descr {
     max-width: 380px;
-    margin-bottom: 54px;
+    margin-bottom: 56px;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.6;
     color: #436372;
     @extend %rubik-400;
   }
@@ -165,7 +162,7 @@
     margin-top: -21%;
     float: right;
   }
-  .slick-list{
+  .slick-list {
     margin-left: 300px;
     margin-right: 300px;
   }
@@ -198,33 +195,31 @@
       }
     }
   }
-}
-
-.info {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 57px;
-  padding: 35px 0;
-  background-color: $bg;
-  &__item {
+  .info {
     display: flex;
-  }
-  &__icon {
-    margin-top: 8px;
-  }
-  &__inner {
-    margin-left: 25px;
-  }
-  &__title {
-    font-size: 18px;
-    line-height: 2.1;
-    color: #414141;
-  }
-  &__text {
-    line-height: 190%;
-    color: #585858;
-    @extend %dmsans-400;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 40px 0;
+    background-color: $bg;
+    &__item {
+      display: flex;
+    }
+    &__icon {
+      margin-top: 8px;
+    }
+    &__inner {
+      margin-left: 25px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #414141;
+    }
+    &__text {
+      line-height: 1.9;
+      color: #585858;
+      @extend %dmsans-400;
+    }
   }
 }
 
@@ -281,23 +276,40 @@
   &__link {
     margin-top: 1px;
     padding: 12px;
+    &--bg {
+      display: block;
+      width: 46px;
+      height: 46px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 7px;
+      transition: all 0.3s;
+    }
+    &--bg:hover {
+      display: block;
+      width: 46px;
+      height: 46px;
+      background-color: #a3bbc8;
+      border-radius: 50%;
+      margin: 7px;
+      transition: all 0.3s;
+      .gallery__link--find {
+        content: url("../images/icons/gallery-fcopy.svg");
+      }
+      .gallery__link--card {
+        content: url("../images/icons/gallery-ccopy.svg");
+      }
+      .gallery__link--heart {
+        content: url("../images/icons/gallery-hcopy.svg");
+        margin-top: 2px;
+      }
+    }
   }
   &__link--find {
     content: url("../images/icons/gallery-find.svg");
   }
-  &__link--find:hover {
-    content: url("../images/icons/gallery-fcopy.svg");
-  }
-
   &__link--card {
     content: url("../images/icons/gallery-card.svg");
-  }
-  &__link--card:hover {
-    content: url("../images/icons/gallery-ccopy.svg");
-  }
-  &__link--heart:hover {
-    content: url("../images/icons/gallery-hcopy.svg");
-    margin-top: 2px;
   }
   &__link--heart {
     content: url("../images/icons/gallery-heart.svg");
@@ -312,38 +324,17 @@
   }
 }
 
-.circle {
-  display: block;
-  width: 46px;
-  height: 46px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: 7px;
-  transition: all 0.3s;
-}
-.circle:hover {
-  display: block;
-  width: 46px;
-  height: 46px;
-  background-color: #a3bbc8;
-  border-radius: 50%;
-  margin: 7px;
-  transition: all 0.3s;
-}
-
 .footer-top {
   display: flex;
   padding: 75px 0;
   border-bottom: 1px solid #dae4e9;
   &__item {
     font-size: 14px;
-    line-height: 2;
     @extend %rubik-400;
   }
   &__title {
     margin-bottom: 16px;
     font-size: 16px;
-    line-height: 1.6;
     color: #1f2044;
     @extend %dmsans-700;
   }
@@ -373,7 +364,6 @@
     color: $links;
   }
   &__adress {
-    
   }
   &__text {
     margin-bottom: 25px;
@@ -399,7 +389,6 @@
     width: 100px;
     height: 40px;
     font-size: 14px;
-    line-height: 1.5;
     padding: 6px 15px;
     background-color: #a3bbc8;
     color: #fff;

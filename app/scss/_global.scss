@@ -7,7 +7,7 @@ body {
   display: flex; // 2 прижимаем footer
   flex-direction: column; // 3 прижимаем footer
   font-size: 16px;
-  line-height: 1.3;
+  line-height: 1.3; //это среднее значение высоты строк
   color: $default;
   background-color: #ffffff;
   @extend %dmsans-500;
@@ -31,4 +31,5 @@ body {
 .title {
   font-size: 36px;
   color: #191919;
+  @extend %dmsans-700;
 }
