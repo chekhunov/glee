@@ -33,3 +33,7 @@ body {
   color: #191919;
   @extend %dmsans-700;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -7,6 +7,6 @@ $(function () {
     autoplaySpeed: 2000,
   });
 
-  var mixer = mixitup(".gallery__content");
+  var mixer = mixitup(".top-products__content");
   
 });
