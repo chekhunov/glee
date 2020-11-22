@@ -4,6 +4,7 @@
 @import "libs"; //подключение сторонних библиотек
 @import "global"; // подключение глобальных стилей типо reset.css, то что на body для сылок
 
+
 .header {
   padding: 0 65px;
 
@@ -56,10 +57,10 @@
       justify-content: center;
       margin-right: 20px;
       align-items: center;
-      padding-top: 17px;
+      padding-top: 16px;
     }
 
-    &__item--find {
+    &__item--find { //нельзя обьеденить с верхним блоком выдает ошибку
       width: 51px;
       height: 51px;
       padding-bottom: 13px;
@@ -95,7 +96,7 @@
     &__line {
       width: 1px;
       height: 32px;
-      margin: -20px 25px 0 30px;
+      margin: -18px 25px 0 30px;
       background-color: #fde7d3;
     }
 
@@ -106,6 +107,11 @@
       border-radius: 50%;
       border: none;
       cursor: pointer;
+      outline: var(--outline-color);
+
+      &:hover{
+        background-color: #a3abc8;
+      }
     }
 
     &__img {
@@ -151,7 +157,7 @@
     padding: 22px 18px 17px 25px;
     background-color: #a3bbc8;
     color: #fff;
-    outline: dotted var(--outline-color);
+    outline: dotted var(--outline-slider);
 
     &:hover {
       background-color: #a3abc8;
@@ -191,7 +197,7 @@
         border-radius: 50%;
 
         &:focus {
-          outline: dotted var(--outline-color);
+          outline: dotted var(--outline-slider); //переменная в _global
         }
       }
 
@@ -335,7 +341,6 @@
         background-color: #a3bbc8;
         border-radius: 50%;
         margin: 7px;
-        transition: all 0.3s;
 
         .top-products__link--find {
           content: url("../images/icons/catalog-fcopy.svg");
@@ -509,3 +514,86 @@
 }
 
 // @import "media";
+.bg-catalog_card {
+    width: 22px; height: 20px;
+    background: url('css_sprites.png') -85px -157px;
+}
+
+.bg-arrow {
+    width: 22px; height: 9px;
+    background: url('css_sprites.png') -94px -214px;
+}
+
+.bg-arrow_black {
+    width: 22px; height: 9px;
+    background: url('css_sprites.png') -136px -214px;
+}
+
+.bg-car {
+    width: 55px; height: 37px;
+    margin-top: 7px;
+    background: url('css_sprites.png') -10px -157px;
+}
+
+.bg-catalog_ccopy {
+    width: 22px; height: 20px;
+    background: url('css_sprites.png') -127px -157px;
+}
+
+.bg-catalog_fcopy {
+    width: 20px; height: 20px;
+    background: url('css_sprites.png') -169px -157px;
+}
+
+.bg-catalog_find {
+    width: 20px; height: 20px;
+    background: url('css_sprites.png') -231px -10px;
+}
+
+.bg-catalog_hcopy {
+    width: 22px; height: 18px;
+    background: url('css_sprites.png') -10px -214px;
+}
+
+.bg-catalog_heart {
+    width: 22px; height: 18px;
+    background: url('css_sprites.png') -52px -214px;
+}
+
+.bg-header_cart {
+    width: 19px; height: 17px;
+    background: url('css_sprites.png') -231px -90px;
+}
+
+.bg-header_ellipse {
+    width: 20px; height: 20px;
+    background: url('css_sprites.png') -231px -50px;
+}
+
+.bg-find {
+    width: 15px; height: 15px;
+    margin-bottom: 4px;
+    background: url('css_sprites.png') -231px -164px;
+}
+
+.bg-header_heart {
+    width: 18px; height: 17px;
+    background: url('css_sprites.png') -231px -127px;
+}
+
+.bg-play {
+    width: 127px; height: 127px;
+    background: url('css_sprites.png') -10px -10px;
+}
+
+.bg-secure {
+    width: 54px; height: 53px;
+    margin-top: 7px;
+    background: url('css_sprites.png') -157px -10px;
+}
+
+.bg-sup {
+    width: 52px; height: 54px;
+    margin-top: 7px;
+    background: url('css_sprites.png') -157px -83px;
+}

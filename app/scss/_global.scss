@@ -1,3 +1,8 @@
+:root {
+  --outline-slider: #fcd7b6;
+  --outline-color: #ffffff;
+}
+
 html,
 body {
   height: 100%; // 1 задаем чтоб footer прижать к низу
@@ -37,3 +42,4 @@ body {
 .uppercase {
   text-transform: uppercase;
 }
+
