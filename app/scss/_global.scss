@@ -1,4 +1,3 @@
-
 html,
 body {
   height: 100%; // 1 задаем чтоб footer прижать к низу
@@ -29,6 +28,19 @@ body {
   flex-grow: 1; // 4 для того чтоб прижать footer к низу
 }
 
+// не знаю куда его поместить
+:root {
+  --outline-slider: #fcd7b6;
+  --outline-color: #ffffff;
+  --outline-placeholder: #fef7f0;
+}
+
+a,
+button {
+  outline: transparent;
+  cursor: pointer;
+}
+
 .title {
   font-size: 36px;
   color: #191919;
@@ -38,4 +50,3 @@ body {
 .uppercase {
   text-transform: uppercase;
 }
-
