@@ -240,30 +240,6 @@
 .top-products {
   padding: 64px 0 45px;
 
-  .category-bubbles {
-    margin-bottom: 75px;
-    text-align: center;
-
-    &__items {
-      margin-top: 25px;
-    }
-
-    &__btn {
-      color: #8b8b8b;
-      border: none;
-      background-color: transparent;
-      outline: var(--outline-color);
-    }
-
-    &__btn + .category-bubbles__btn {
-      margin-left: 16px;
-    }
-
-    .mixitup-control-active {
-      color: #1a1a1a;
-    }
-  }
-
   &__content {
     display: flex;
     flex-wrap: wrap;
@@ -277,14 +253,20 @@
     margin: 0 30px 40px 0;
     text-align: center;
     background-color: $w;
-    background-repeat: no-repeat;
-    background-position: center 30%;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 10px;
 
     &:hover .top-products__links {
       opacity: 1;
     }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 38%;
+    margin: 0 auto;
   }
 
   &__links {
@@ -298,31 +280,28 @@
   }
 
   &__link {
+    display: block;
+    width: 46px;
     margin-top: 1px;
     padding: 12px;
+    height: 46px;
+    margin: 7px;
+    background-color: $w;
+    border-radius: 50%;
+    transition: all 0.3s;
 
-    &--bg {
-      display: block;
-      width: 46px;
-      height: 46px;
-      margin: 7px;
-      background-color: $w;
-      border-radius: 50%;
-      transition: all 0.3s;
+    &:hover {
+      background-color: $default;
 
-      &:hover {
-        background-color: $default;
-
-        .bgcat-find,
-        .bgcat-card,
-        .bgcat-heart {
-          display: none;
-        }
-        .bgcat-fcopy,
-        .bgcat-ccopy,
-        .bgcat-hcopy {
-          display: block;
-        }
+      .find-front,
+      .card-front,
+      .heart-front {
+        display: none;
+      }
+      .find-behind,
+      .card-behind,
+      .heart-behind {
+        display: block;
       }
     }
   }
@@ -338,7 +317,7 @@
   }
 }
 
-.video-review{
+.video-review {
   --ratio: 500 / 1920;
   width: 100%;
   max-width: 100%;
@@ -349,13 +328,47 @@
   align-items: center;
   background-repeat: no-repeat;
   background-position: top center;
-  
-  &__btn{
+
+  &__btn {
     border-radius: 50%;
-  
-    &:hover{
+
+    &:hover {
       box-shadow: inset 0px 0px 15px 20px $w;
     }
+  }
+}
+
+.design {
+  margin-bottom: 85px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 30px 35px 0;
+  }
+
+  &__inner {
+    position: absolute;
+    margin: 35px 0 0 35px;
+    @extend %dmsans-700;
+    z-index: 1;
+  }
+  &__title {
+    font-size: 20px;
+    color: #191919;
+    
+    &:nth-child(2) {
+      margin-bottom: 10px;
+    }
+  }
+  &__text{
+    font-size: 16px;
+    color: #a3bbc8;
   }
 }
 
@@ -501,40 +514,40 @@
   }
 }
 
-.bgcat-card {
+.card-front {
   width: 22px;
   height: 20px;
   background: url("css_sprites.png") -85px -157px;
 }
 
-.bgcat-ccopy {
+.card-behind {
   display: none;
   width: 22px;
   height: 20px;
   background: url("css_sprites.png") -127px -157px;
 }
 
-.bgcat-find {
+.find-front {
   width: 20px;
   height: 20px;
   background: url("css_sprites.png") -231px -10px;
 }
 
-.bgcat-fcopy {
+.find-behind {
   display: none;
   width: 20px;
   height: 20px;
   background: url("css_sprites.png") -169px -157px;
 }
 
-.bgcat-heart {
+.heart-front {
   width: 22px;
   height: 18px;
   margin-top: 2px;
   background: url("css_sprites.png") -52px -214px;
 }
 
-.bgcat-hcopy {
+.heart-behind {
   display: none;
   width: 22px;
   height: 18px;

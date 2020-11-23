@@ -41,12 +41,33 @@ button {
   cursor: pointer;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .title {
   font-size: 36px;
+  text-align: center;
   color: #191919;
   @extend %dmsans-700;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.category {
+  margin: 25px 0 75px;
+  text-align: center;
+
+  &__btn {
+    color: #8b8b8b;
+    border: none;
+    background-color: transparent;
+    outline: var(--outline-color);
+  }
+
+  &__btn + .category__btn {
+    margin-left: 16px;
+  }
+
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
 }
