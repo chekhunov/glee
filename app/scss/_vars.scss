@@ -33,3 +33,10 @@ $bg: #fef7f0; // темные места фона
   font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
