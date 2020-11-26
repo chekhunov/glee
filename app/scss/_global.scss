@@ -71,3 +71,9 @@ button {
     color: #1a1a1a;
   }
 }
+
+.partners__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
