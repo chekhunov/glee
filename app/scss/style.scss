@@ -5,8 +5,6 @@
 @import "global"; // подключение глобальных стилей типо reset.css, то что на body для сылок
 
 .header {
-  padding: 0 65px;
-
   &__top {
     display: flex;
     justify-content: space-between;
@@ -50,6 +48,7 @@
 
   .menu-nav {
     display: flex;
+    margin-right: -5px;
 
     &__item {
       display: flex;
@@ -59,11 +58,19 @@
       padding-top: 16px;
     }
 
+    &__heart {
+      margin-right: -2px;
+    }
+
+    &__ellipse {
+      margin-bottom: -4px;
+    }
+
     &__item--find {
       //нельзя обьеденить с верхним блоком выдает ошибку
       width: 51px;
       height: 51px;
-      padding-bottom: 13px;
+      padding-bottom: 10px;
       background-color: #edf1f4;
       border-radius: 50%;
     }
@@ -77,12 +84,18 @@
 
     &__link {
       position: relative;
+      background-color: #fcd7b6;
+      border: none;
+      &--find {
+        background-color: #edf1f4;
+        margin-right: -2px;
+      }
     }
 
     &__num {
       position: absolute;
       top: -8px;
-      right: -8px;
+      right: -2px;
       width: 16px;
       height: 16px;
       font-size: 10px;
@@ -96,7 +109,7 @@
     &__line {
       width: 1px;
       height: 32px;
-      margin: -18px 25px 0 30px;
+      margin: -18px 20px 0 25px;
       background-color: #fde7d3;
     }
 
@@ -163,6 +176,9 @@
       background-color: #a3abc8;
     }
   }
+  &__arrow {
+    margin-left: 55px;
+  }
 
   &__img {
     margin-top: -21%;
@@ -213,6 +229,12 @@
 
     &__item {
       display: flex;
+    }
+    &__sup,
+    &__car,
+    &__secure {
+      display: block;
+      margin-top: 5px;
     }
 
     &__icon {
@@ -288,7 +310,7 @@
     padding: 12px;
     background-color: $w;
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: all 0s;
 
     &:hover {
       background-color: $default;
@@ -303,6 +325,10 @@
       .heart-behind {
         display: block;
       }
+    }
+    .heart-front,
+    .heart-behind {
+      margin-top: 2px;
     }
   }
 
@@ -365,6 +391,9 @@
       background-color: $default;
     }
   }
+  &__arrow-b {
+    margin-left: 40px;
+  }
 }
 
 .design {
@@ -421,6 +450,9 @@
       box-shadow: inset 0px 0px 15px 20px $w;
     }
   }
+  &__play-btn{
+    display: block;
+  }
 }
 
 .news {
@@ -441,7 +473,7 @@
     }
 
     &--news {
-      margin-left: 26px;
+      margin-left: 30px;
       padding: 4px 28px;
       background-color: $default;
       color: $w;
@@ -485,6 +517,11 @@
   &__date {
     margin-right: 28px;
   }
+  &__autor,
+  &__calendar{
+    margin-right: 5px;
+  }
+
   &__bottom {
     margin-right: 30px;
     padding-bottom: 90px;
@@ -631,136 +668,4 @@
       color: $default;
     }
   }
-}
-
-.arrow-b {
-  display: inline-block;
-  width: 22px;
-  height: 9px;
-  margin-left: 40px;
-  background: url("css_sprites.png") -164px -214px;
-}
-
-.arrow {
-  display: inline-block;
-  margin-left: 55px;
-  width: 22px;
-  height: 9px;
-  background: url("css_sprites.png") -206px -214px;
-}
-
-.bg-cart {
-  width: 19px;
-  height: 17px;
-  margin-bottom: 6px;
-  background: url("css_sprites.png") -231px -90px;
-}
-
-.bg-ellipse {
-  width: 20px;
-  height: 20px;
-  margin: 0 auto;
-  background: url("css_sprites.png") -169px -157px;
-}
-
-.bg-find {
-  width: 15px;
-  height: 15px;
-  margin-bottom: 4px;
-  background: url("css_sprites.png") -129px -214px;
-}
-
-.bg-heart {
-  width: 18px;
-  height: 17px;
-  margin-bottom: 6px;
-  background: url("css_sprites.png") -231px -127px;
-}
-
-.bg-car {
-  width: 55px;
-  height: 37px;
-  margin-top: 7px;
-  background: url("css_sprites.png") -10px -157px;
-}
-
-.card-behind {
-  display: none;
-  width: 22px;
-  height: 20px;
-  background: url("css_sprites.png") -85px -157px;
-}
-
-.card-front {
-  width: 22px;
-  height: 20px;
-  background: url("css_sprites.png") -127px -157px;
-}
-
-.find-behind {
-  display: none;
-  width: 20px;
-  height: 20px;
-  background: url("css_sprites.png") -231px -10px;
-}
-
-.find-front {
-  width: 20px;
-  height: 20px;
-  background: url("css_sprites.png") -231px -50px;
-}
-
-.heart-behind {
-  display: none;
-  width: 22px;
-  height: 18px;
-  margin-top: 2px;
-  background: url("css_sprites.png") -10px -214px;
-}
-
-.heart-front {
-  width: 22px;
-  height: 18px;
-  margin-top: 2px;
-  background: url("css_sprites.png") -52px -214px;
-}
-
-.news-arrow {
-  width: 6px;
-  height: 11px;
-  background: url("css_sprites.png") -271px -10px;
-}
-
-.play-btn {
-  width: 127px;
-  height: 127px;
-  background: url("css_sprites.png") -10px -10px;
-}
-
-.bg-secure {
-  width: 54px;
-  height: 53px;
-  margin-top: 7px;
-  background: url("css_sprites.png") -157px -10px;
-}
-
-.bg-sup {
-  width: 52px;
-  height: 54px;
-  margin-top: 7px;
-  background: url("css_sprites.png") -157px -83px;
-}
-
-.date {
-  width: 17px;
-  height: 17px;
-  margin-right: 10px;
-  background: url("css_sprites.png") -231px -164px;
-}
-
-.autor {
-  width: 15px;
-  height: 17px;
-  margin-right: 10px;
-  background: url("css_sprites.png") -94px -214px;
 }
