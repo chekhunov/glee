@@ -1,4 +1,6 @@
 $(function () {
+
+
   $(".slider-home__inner").slick({
     dots: true,
     arrows: false,
