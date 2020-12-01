@@ -1,0 +1,142 @@
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0px 46px; //отступ верх и низ в хеддере
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin-right: -8%;
+
+  &__list {
+    display: flex;
+    margin-top: -5px;
+  }
+
+  &__item {
+    & + & {
+      margin-left: 35px;
+    }
+    span {
+      margin-left: 3px;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    color: #436372;
+    border-bottom: 1px solid transparent;
+    transition: color 0.5s, border-color 0.5s;
+    @extend %rubik-500;
+
+    &:hover {
+      color: $default;
+      border-color: $default;
+    }
+  }
+}
+
+.menu-nav {
+  display: flex;
+  margin-right: -5px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    align-items: center;
+    padding-top: 16px;
+    transition: background-color 0.5s;
+
+    &--heart {
+      min-width: 178px;
+      height: 51;
+      background-color: #fcd7b6;
+      border-radius: 50px;
+    }
+
+    &--find {
+      width: 51px;
+      height: 51px;
+      padding-bottom: 10px;
+      background-color: #edf1f4;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background-color: $default;
+
+      .menu-nav__btn {
+        background-color: $default;
+        color: $title;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    background-color: #fcd7b6;
+    color: $title;
+    border: none;
+    transition: background-color 0.5s, color 0.5s;
+
+    &--find {
+      background-color: #edf1f4;
+      margin-right: -2px;
+    }
+  }
+
+  &__heart {
+    margin-right: -2px;
+  }
+
+  &__ellipse {
+    margin-bottom: -4px;
+  }
+
+  &__num {
+    position: absolute;
+    top: -8px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    background-color: $white;
+    color: $title;
+    border-radius: 50%;
+  }
+
+  &__line {
+    width: 1px;
+    height: 32px;
+    margin: -18px 20px 0 25px;
+    background-color: #fde7d3;
+  }
+
+  &__popup {
+    width: 51px;
+    height: 51px;
+    background-color: $default;
+    border-radius: 50%;
+    border: none;
+    outline: $white;
+    color: $white;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $title;
+    }
+  }
+}

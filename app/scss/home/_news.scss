@@ -1,0 +1,104 @@
+.news {
+  padding: 50px 0 50px;
+  box-shadow: inset 0em -437px #fef7f0;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &--autor {
+      color: #222933;
+    }
+  }
+
+  &__title {
+    margin-right: 18px;
+    color: #262626;
+    @extend %dmsans-700;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.5s;
+
+    &:hover {
+      color: #8b8b8b;
+      border-color: #8b8b8b;
+    }
+  }
+
+  &__more-title {
+    margin-left: 30px;
+    padding: 4px 28px;
+    background-color: $default;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 25px;
+  }
+
+  &__items {
+    display: flex;
+    margin: 0 -27px 94px 0;
+    padding-top: 42px;
+  }
+
+  &__item {
+    margin-right: 30px;
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+    &:hover {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &__image {
+    max-width: 370px;
+    max-height: 250px;
+    margin-bottom: -10px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+  }
+
+  &__text {
+    min-height: 101px;
+    max-height: 101px;
+    max-width: 315px;
+    margin-left: 28px;
+    padding: 23px 28px 13px 0;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #262626;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    padding: 20px 35px 21px;
+    font-size: 12px;
+    color: #222933;
+    @extend %rubik-400;
+  }
+
+  &__date {
+    margin-right: 28px;
+  }
+
+  &__autor {
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-color: #222933;
+    }
+  }
+
+  &__autor-img,
+  &__calendar-img {
+    margin-right: 5px;
+  }
+}
