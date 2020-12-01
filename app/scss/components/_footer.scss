@@ -1,0 +1,149 @@
+.footer {
+  &__top {
+    display: flex;
+    padding: 95px 0 50px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 10px;
+    @extend %rubik-400;
+
+    &--links {
+      max-width: 120px;
+      margin-right: 180px;
+    }
+
+    &--form {
+      max-width: 270px;
+      margin-left: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #1f2044;
+    @extend %dmsans-700;
+  }
+
+  &__logo {
+    display: block;
+    margin: -16px 0 27px 0;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    line-height: 1.9;
+    color: $links;
+  }
+
+  &__link {
+    line-height: 1.7;
+    color: $links;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__form {
+    padding-top: 8px;
+
+    &-input {
+      max-width: 166px;
+      height: 40px;
+      margin-right: -2px;
+      padding: 5px 10px 5px 15px;
+      background-color: $bg;
+      border: none;
+      outline: $white;
+
+      &::placeholder {
+        font-size: 12px;
+        color: #234969;
+        @extend %dmsans-400;
+      }
+    }
+
+    &-btn {
+      max-width: 100px;
+      height: 40px;
+      font-size: 14px;
+      padding: 6px 20px;
+      background-color: $default;
+      color: $white;
+      border: none;
+      @extend %dmsans-400;
+    }
+  }
+
+  &__bottom {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 2.3;
+    color: $links;
+    @extend %rubik-400;
+  }
+}
+
+.footer-menu {
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    &::before {
+      content: "|";
+      margin-right: 14px;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+
+    & + & {
+      margin-left: 11px;
+    }
+  }
+
+  &__link {
+    color: $links;
+
+    &:hover {
+      text-decoration: underline;
+      color: $default;
+    }
+  }
+}
+
+.contact {
+  max-width: 200px;
+  margin-right: 100px;
+  @extend %rubik-400;
+
+  &__text {
+    display: block;
+    font-size: 14px;
+    line-height: 2.3;
+    color: $links;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--address {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+}

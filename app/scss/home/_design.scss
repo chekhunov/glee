@@ -1,0 +1,55 @@
+.design {
+  margin-bottom: 81px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 370px;
+    max-height: 246px;
+    margin: 0 30px 35px 0;
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    margin: 35px 0 0 35px;
+    padding-right: 20px;
+    @extend %dmsans-700;
+  }
+
+  &__title {
+    max-width: 200px;
+    max-height: 50px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #191919;
+    overflow: hidden;
+
+    &:nth-child(2) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    display: block;
+    max-width: 100px;
+    max-height: 40px;
+    font-size: 16px;
+    color: #a3bbc8;
+    overflow: hidden;
+  }
+
+  &__img {
+    border-radius: 5px;
+    object-fit: cover;
+  }
+}

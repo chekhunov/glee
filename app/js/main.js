@@ -1,7 +1,7 @@
 $(function () {
 
 
-  $(".slider-home__inner").slick({
+  $(".slider-home__items").slick({
     dots: true,
     arrows: false,
     fade: true,
