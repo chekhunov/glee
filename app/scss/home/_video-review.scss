@@ -23,5 +23,8 @@
 
   &__play-btn {
     display: block;
+    max-width: 127px;
+    max-height: 127px;
+    object-fit: cover;
   }
 }

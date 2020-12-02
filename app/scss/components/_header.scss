@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 48px 0px 46px; //отступ верх и низ в хеддере
+    padding: 48px 0px 46px;
   }
 }
 
@@ -72,15 +72,46 @@
     &:hover {
       background-color: $default;
 
-      .menu-nav__btn {
-        background-color: $default;
-        color: $title;
+      .menu-nav {
+        &__btn {
+          background-color: $default;
+          color: $title;
 
-        &:hover {
-          color: $white;
+          &:hover {
+            color: $white;
+          }
         }
       }
     }
+  }
+
+  &__find {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__heart {
+    width: 22px;
+    height: 18px;
+  }
+
+  &__cart {
+    width: 19px;
+    height: 17px;
+    margin-top: -4px;
+  }
+
+  &__line {
+    width: 1px;
+    height: 32px;
+    margin: -18px 20px 0 25px;
+    background-color: #fde7d3;
+  }
+
+  &__ellipse {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
   }
 
   &__btn {
@@ -96,14 +127,6 @@
     }
   }
 
-  &__heart {
-    margin-right: -2px;
-  }
-
-  &__ellipse {
-    margin-bottom: -4px;
-  }
-
   &__num {
     position: absolute;
     top: -8px;
@@ -116,13 +139,6 @@
     background-color: $white;
     color: $title;
     border-radius: 50%;
-  }
-
-  &__line {
-    width: 1px;
-    height: 32px;
-    margin: -18px 20px 0 25px;
-    background-color: #fde7d3;
   }
 
   &__popup {

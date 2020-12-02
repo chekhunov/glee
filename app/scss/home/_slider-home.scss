@@ -59,6 +59,8 @@
   }
 
   &__arrow {
+    width: 22px;
+    height: 9px;
     margin-left: 55px;
   }
 
@@ -121,12 +123,28 @@
     min-width: 300px;
   }
 
+  &__sup {
+    width: 51px;
+    height: 53px;
+  }
+
+  &__car {
+    width: 54px;
+    height: 37px;
+  }
+
+  &__secure {
+    width: 53px;
+    height: 52px;
+  }
+
   &__sup,
   &__car,
   &__secure {
     display: block;
     margin-top: 5px;
     margin-right: 20px;
+    object-fit: cover;
   }
 
   &__inner {

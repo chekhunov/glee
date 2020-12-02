@@ -68,8 +68,26 @@
     }
   }
 
+  &__find {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__card {
+    width: 22px;
+    height: 20px;
+  }
+
   &__heart {
+    width: 22px;
+    height: 18px;
     margin-top: 2px;
+  }
+
+  &__find,
+  &__card,
+  &__heart {
+    object-fit: cover;
   }
 
   &__title {
@@ -162,6 +180,8 @@
   }
 
   &__arrow-b {
+    width: 22px;
+    height: 9px;
     margin-left: 40px;
   }
 }

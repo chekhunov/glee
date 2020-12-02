@@ -17,6 +17,12 @@
     }
   }
 
+  &__arrow {
+    width: 6.1px;
+    height: 11px;
+    object-fit: cover;
+  }
+
   &__title {
     margin-right: 18px;
     color: #262626;
@@ -97,8 +103,20 @@
     }
   }
 
+  &__autor-img {
+    width: 15px;
+    height: 17px;
+  }
+
+  &__calendar-img {
+    width: 17px;
+    height: 17px;
+  }
+
   &__autor-img,
   &__calendar-img {
+    margin-top: -3px;
     margin-right: 5px;
+    object-fit: cover;
   }
 }
