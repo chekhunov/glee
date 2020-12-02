@@ -36,6 +36,14 @@ button {
   text-transform: uppercase;
 }
 
+.logo {
+  &__img {
+    max-width: 146px;
+    max-height: 39px;
+    object-fit: cover;
+  }
+}
+
 .title {
   max-height: 50px;
   font-size: 36px;
