@@ -401,6 +401,7 @@
   "devDependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.13",
+    "clamp-js-main": "^0.11.6",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

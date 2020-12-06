@@ -45,21 +45,24 @@ button {
 }
 
 .title {
-  max-height: 50px;
+  display: -webkit-box;     
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  max-height: 50px;      
+  margin: 0 auto;
+  padding: 0 5px;
   font-size: 36px;
   text-align: center;
   color: #191919;
   @extend %dmsans-700;
-  overflow: hidden;
 }
 
 .category {
   margin: 25px 0 75px;
   text-align: center;
-
-  &--design {
-    margin-top: 21px;
-  }
 
   &__btn {
     color: #8b8b8b;
@@ -73,8 +76,8 @@ button {
       border-color: #8b8b8b;
     }
 
-    & + & {
-      margin-left: 16px;
+    &:not(:last-child){
+      margin-right: 16px;
     }
   }
 
@@ -83,35 +86,3 @@ button {
   }
 }
 
-.design {
-  &__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-  }
-}
-
-.partners {
-  margin-right: 30px;
-  padding-bottom: 40px;
-  &__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  &__item {
-    max-width: 170px;
-    max-height: 85px;
-    object-fit: cover;
-  }
-}
-
-.news {
-  &__meta {
-    text-transform: uppercase;
-  }
-}

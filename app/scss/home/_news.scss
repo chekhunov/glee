@@ -1,6 +1,6 @@
 .news {
   padding: 50px 0 50px;
-  box-shadow: inset 0em -437px #fef7f0;
+  box-shadow: inset 0em -442px #fef7f0;
 
   &__top {
     display: flex;
@@ -8,21 +8,16 @@
     align-items: flex-end;
   }
 
-  &__link {
-    display: flex;
-    align-items: center;
-
-    &--autor {
-      color: #222933;
-    }
-  }
-
   &__arrow {
-    width: 6.1px;
+    width: 6px;
     height: 11px;
   }
 
   &__title {
+    margin-left: 0;
+  }
+
+  &__title-link {
     margin-right: 18px;
     color: #262626;
     @extend %dmsans-700;
@@ -35,51 +30,52 @@
     }
   }
 
+  &__inner {
+    display: flex;
+    margin: 0 -27px 94px 0;
+    padding-top: 44px;
+  }
+}
+
+.card-news {
+  max-width: 370px;
+  margin-right: 30px;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+
   &__more-title {
-    margin-left: 30px;
-    padding: 4px 28px;
+    display: -webkit-inline-box;
+    height: 30px;
+    margin: -7px 30px 0;
+    padding: 7px 28px;
     background-color: $default;
     color: $white;
     text-transform: uppercase;
     border-radius: 25px;
   }
 
-  &__items {
-    display: flex;
-    margin: 0 -27px 94px 0;
-    padding-top: 42px;
-  }
-
-  &__item {
-    margin-right: 30px;
-    background-color: $white;
-    border-radius: 5px;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-
-    &:hover {
-      box-shadow: $box-shadow;
-    }
-  }
-
   &__image {
-    max-width: 370px;
-    max-height: 250px;
+    width: 370px;
+    height: 250px;
     margin-bottom: -10px;
     border-radius: 5px 5px 0 0;
     object-fit: cover;
   }
 
   &__text {
-    min-height: 101px;
-    max-height: 101px;
+    min-height: 97px;
     max-width: 315px;
     margin-left: 28px;
-    padding: 23px 28px 13px 0;
+    padding: 20px 28px 5px 0;
     font-size: 18px;
     line-height: 1.2;
     color: #262626;
     border-bottom: 1px solid #e0e0e0;
-    overflow-x: auto;
   }
 
   &__meta {
@@ -88,6 +84,7 @@
     padding: 20px 35px 21px;
     font-size: 12px;
     color: #222933;
+    text-transform: uppercase;
     @extend %rubik-400;
   }
 
@@ -95,14 +92,24 @@
     margin-right: 28px;
   }
 
-  &__autor {
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &--author {
+      color: #222933;
+    }
+  }
+
+  &__author {
     border-bottom: 1px solid transparent;
+
     &:hover {
       border-color: #222933;
     }
   }
 
-  &__autor-img {
+  &__author-img {
     width: 15px;
     height: 17px;
   }
@@ -113,8 +120,24 @@
     margin-bottom: -2px;
   }
 
-  &__autor-img,
+  &__author-img,
   &__calendar-img {
-    margin: -2px 5px 0 0;
+    margin: -2px 5px 0px 0;
+  }
+}
+
+.partners {
+  margin-right: 30px;
+  padding-bottom: 40px;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 170px;
+    max-height: 85px;
+    object-fit: cover;
   }
 }
