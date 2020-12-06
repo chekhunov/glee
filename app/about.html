@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Glee | HOME</title>
+  <title>Glee | ABOUT</title>
 </head>
 
 <body>
@@ -66,19 +66,25 @@
 
         <div class="menu-nav">
 
-          <button class="menu-nav__btn menu-nav__btn--find" href="#">
+          <div class="menu-nav__item menu-nav__item--find">
 
-            <svg class="menu-nav__find">
-              <use xlink:href="#img-find"></use>
-            </svg>
+            <button class="menu-nav__btn menu-nav__btn--find" href="#">
 
-          </button>
+              <svg class="menu-nav__find" width="15.28" height="15.281" viewBox="0 0 15.28 15.281"
+                xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                <use xlink:href="#img-find"></use>
+              </svg>
+
+            </button>
+
+          </div>
 
           <div class="menu-nav__item menu-nav__item--heart">
 
             <button class="menu-nav__btn menu-nav__btn--heart" href="#">
 
-              <svg class="menu-nav__heart">
+              <svg class="menu-nav__heart" width="22" height="18" viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg"
+                version="1.1" preserveAspectRatio="xMinYMin">
                 <use xlink:href="#img-heart"></use>
               </svg>
 
@@ -92,7 +98,8 @@
 
             <button class="menu-nav__btn" href="#">
 
-              <svg class="menu-nav__cart">
+              <svg class="menu-nav__cart" width="18.94" height="16.969" viewBox="0 0 18.94 16.969"
+                xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                 <use xlink:href="#img-bg-cart"></use>
               </svg>
 
@@ -105,7 +112,8 @@
 
           <button class="menu-nav__popup">
 
-            <svg class="menu-nav__ellipse">
+            <svg class="menu-nav__ellipse" width="20.03" height="20.031" viewBox="0 0 20.03 20.031"
+              xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
               <use xlink:href="#img-bg-ellipse"></use>
             </svg>
 
@@ -121,97 +129,126 @@
 
   <main class="main">
 
-    <section class="slider-home">
+    <div class="top">
 
-      <div class="container container--big">
+      <div class="container">
 
-        <div class="slider-home__inner">
+        <h1>
 
-          <div class="slider-home__items">
+          About Us
 
-            <div class="slider-home__item">
+        </h1>
 
-              <div class="slider-home__about">
+        <div class="breadcrumbs">
 
-                <p class="slider-home__title">
-                  Smart and trendy
-                  Smart and trendy
-                  Smart and trendy
-                  Smart and trendy
-                </p>
+          <ul class="breadcrumbs__list">
 
-                <p class="slider-home__descr box-limit">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
+            <li class="breadcrumbs__item">
 
-                <a class="slider-home__link" href="#">
-                  Shop Now
+              <a class="breadcrumbs__link" href="#">
+                Home
+              </a>
 
-                  <svg class="slider-home__arrow">
-                    <use xlink:href="#img-arrow"></use>
-                  </svg>
+            </li>
 
-                </a>
+            <li class="breadcrumbs__item">
+
+              <span class="breadcrumbs__link" href="#">
+                About Us
+              </span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <section class="general-info">
+
+
+
+      <div class="container">
+
+        <img class="general-info__img" src="images/about-us-bg.png" alt="about image">
+
+        <div class="general-info__experience">
+
+          <div class="general-info__subtitle">
+
+            <span class="general-info__number">
+
+              12
+
+            </span>
+
+            <ul class="general-info__list">
+
+              <li class="general-info__item">
+                Yers
+              </li>
+
+              <li class="general-info__item">
+                Experience
+              </li>
+
+              <li class="general-info__item">
+                Working
+              </li>
+
+            </ul>
+
+          </div>
+
+          <h2 class="title">
+
+            Mission of our creative house
+
+          </h2>
+
+          <p class="general-info__text">
+
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum
+
+          </p>
+
+          <div class="general-info__nested">
+            
+            <div class="general-info__item">
+
+
+              <div class="general-info__inner">
+
+                <span class="general-info__num">
+
+                  520+
+
+                </span>
+
+                <span class="general-info__about">
+
+                  Projects
+
+                </span>
 
               </div>
-
-              <img class="slider-home__img" src="images/slider/photo.png" alt="photo slider">
 
             </div>
 
-            <div class="slider-home__item">
+            <div class="general-info__item">
 
-              <div class="slider-home__about">
 
-                <p class="slider-home__title">
-                  Smart and trendy
-                </p>
-
-                <p class="slider-home__descr  box-limit">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-
-                <a class="slider-home__link" href="#">
-                  Shop Now
-
-                  <svg class="slider-home__arrow">
-                    <use xlink:href="#img-arrow"></use>
-                  </svg>
-
-                </a>
-
-              </div>
-
-              <img class="slider-home__img" src="images/slider/photo.png" alt="photo slider">
 
             </div>
 
-            <div class="slider-home__item">
+            <div class="general-info__item">
+              
 
-              <div class="slider-home__about">
-
-                <p class="slider-home__title">
-                  Smart and trendy
-                </p>
-
-                <p class="slider-home__descr  box-limit">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
-
-                <a class="slider-home__link" href="#">
-                  Shop Now
-
-                  <svg class="slider-home__arrow">
-                    <use xlink:href="#img-arrow"></use>
-                  </svg>
-
-                </a>
-
-              </div>
-
-              <img class="slider-home__img" src="images/slider/photo.png" alt="photo slider">
 
             </div>
 
@@ -219,735 +256,11 @@
 
         </div>
 
-        <ul class="slider-home__list-info">
-
-          <li class="slider-home__item-info">
-
-            <svg class="slider-home__sup-info">
-              <use xlink:href="#img-sup"></use>
-            </svg>
-
-            <div class="slider-home__inner-info">
-
-              <span class="slider-home__title-info box-limit">
-                Support 24/7.
-              </span>
-
-              <p class="slider-home__text-info box-hiden box-hiden">
-
-                Contact us 24 hours a day,
-                7 days a week.
-
-              </p>
-
-            </div>
-
-          </li>
-
-          <li class="slider-home__item-info">
-
-            <svg class="slider-home__car-info">
-              <use xlink:href="#img-car"></use>
-            </svg>
-
-            <div class="slider-home__inner-info">
-
-              <span class="slider-home__title-info box-limit">
-                Delivery.
-              </span>
-
-              <p class="slider-home__text-info slider-home__text-info--indent box-hiden">
-
-                Free shipping on all US order.
-
-              </p>
-
-            </div>
-
-          </li>
-
-          <li class="slider-home__item-info">
-
-            <svg class="slider-home__secure-info">
-              <use xlink:href="#img-secure"></use>
-            </svg>
-
-            <div class="slider-home__inner-info">
-
-              <span class="slider-home__title-info box-limit">
-                100% Payment secure.
-              </span>
-
-              <p class="slider-home__text-info box-hiden">
-
-                We ensure secure payment
-                with PEV.
-
-              </p>
-
-            </div>
-
-          </li>
-
-        </ul>
-
       </div>
 
-    </section>
 
-    <section class="top-products">
 
-      <div class="container" data-ref="top-products">
 
-        <h2 class="title">
-          Products of the week
-        </h2>
-
-        <div class="category">
-
-          <button class="category__btn" data-filter="all">
-            All
-          </button>
-          <button class="category__btn" data-filter=".category-a">
-            Furnitures
-          </button>
-          <button class="category__btn" data-filter=".category-b">
-            Chairs
-          </button>
-          <button class="category__btn" data-filter=".category-c">
-            Lighting
-          </button>
-          <button class="category__btn" data-filter=".category-d">
-            Decor
-          </button>
-
-        </div>
-
-        <div class="top-products__inner">
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/wooden-radio.png" alt="image wooden radio">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              Wooden radio
-            </h3>
-
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/wooden-chair.png" alt="image wooden chair">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              Wooden chair
-            </h3>
-
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/white-chair.png" alt="image white chair">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              White chair
-            </h3>
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/retro-table.png" alt="image retro table">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              Retro table
-            </h3>
-            
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/wooden-radio-1.png" alt="image wooden radio">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              Wooden radio
-            </h3>
-
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/wooden-chair-1.png" alt="image wooden chair">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              Wooden chair
-            </h3>
-            
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/white-chair-1.png" alt="image wooden radio">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              White chair
-            </h3>
-
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-          <article class="card mix category-b">
-
-            <div class="card__img-box">
-
-              <img class="card__img" src="images/catalog/top-products/retro-table-1.png" alt="image retro table">
-
-            </div>
-
-            <h3 class="card__title box-limit">
-              Retro table
-            </h3>
-
-            <span class="card__price">
-              $29.00
-            </span>
-
-            <div class="card__link-box">
-
-              <a class="card__link" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-find-front"></use>
-                </svg>
-
-              </a>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon">
-                  <use xlink:href="#img-card-front"></use>
-                </svg>
-
-              </button>
-
-              <button class="card__btn" href="#">
-
-                <svg class="card__icon card__icon--heart">
-                  <use xlink:href="#img-heart-front"></use>
-                </svg>
-
-              </button>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-      <div class="review">
-
-        <div class="container container--big">
-
-          <div class="review__inner">
-
-            <article class="card-review">
-
-              <img class="card-review__img" src="images/catalog/review/1.png" alt="review images">
-
-              <div class="card-review__content">
-
-                <h3 class="card-review__title box-limit">
-
-                  Mirum Notare Tellus
-
-                </h3>
-
-                <p class="card-review__text box-hiden">
-
-                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
-
-                </p>
-
-                <a class="card-review__link" href="#">
-
-                  View More
-
-                  <svg class="card-review__arrow-b">
-                    <use xlink:href="#img-arrow-b"></use>
-                  </svg>
-
-                </a>
-
-              </div>
-
-            </article>
-
-            <article class="card-review">
-
-              <img class="card-review__img card-review__img--indent" src="images/catalog/review/2.png"
-                alt="review images">
-
-              <div class="card-review__content">
-
-                <h3 class="card-review__title box-limit">
-
-                  Malesuada Tempor Euismod
-
-                </h3>
-
-                <p class="card-review__text">
-
-                  50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
-
-                </p>
-
-                <a class="card-review__link" href="#">
-
-                  View More
-
-                  <svg class="card-review__arrow-b">
-                    <use xlink:href="#img-arrow-b"></use>
-                  </svg>
-
-                </a>
-
-              </div>
-
-
-
-            </article>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="design">
-
-      <div class="container" data-ref="design">
-
-        <h2 class="title">
-          New Design
-        </h2>
-
-        <div class="category design__category">
-
-          <button class="category__btn" data-filter="all">
-            All
-          </button>
-          <button class="category__btn" data-filter=".category-e">
-            Furnitures
-          </button>
-          <button class="category__btn" data-filter=".category-f">
-            Chairs
-          </button>
-          <button class="category__btn" data-filter=".category-g">
-            Lighting
-          </button>
-          <button class="category__btn" data-filter=".category-h">
-            Decor
-          </button>
-
-        </div>
-
-        <div class="design__inner">
-
-          <article class="card-design mix category-e" href="#">
-
-            <div class="card-design__content">
-
-              <h3 class="card-design__title">
-                Beat Flat Pendant
-                Black
-              </h3>
-
-              <span class="card-design__text">
-                Classic
-              </span>
-
-            </div>
-
-            <img class="card-design__img" src="images/catalog/new-design/A112-23.jpg" alt="image sofa-A112-23">
-
-            <a class="card-design__link" href="#">Сlick areas</a>
-
-          </article>
-
-          <article class="card-design mix category-e" href="#">
-
-            <div class="card-design__content">
-
-              <h3 class="card-design__title">
-                Lampe Sur Pieds
-                Bamboo
-              </h3>
-
-              <span class="card-design__text">
-                Classic
-              </span>
-
-            </div>
-
-            <img class="card-design__img" src="images/catalog/new-design/k36.jpg" alt="image lampe sur">
-
-            <a class="card-design__link" href="#">Сlick areas</a>
-
-          </article>
-
-          <article class="card-design mix category-f" href="#">
-
-            <div class="card-design__content">
-
-              <h3 class="card-design__title">
-                Rattan Rocking
-                Chair
-              </h3>
-
-              <span class="card-design__text">
-                Classic
-              </span>
-
-            </div>
-
-            <img class="card-design__img" src="images/catalog/new-design/r01.jpg" alt="image chair">
-
-            <a class="card-design__link" href="#">Сlick areas</a>
-
-          </article>
-
-          <article class="card-design mix category-e" href="#">
-
-            <div class="card-design__content">
-
-              <h3 class="card-design__title">
-                Rattan Rocking
-                Chair
-              </h3>
-
-              <span class="card-design__text">
-                Classic
-              </span>
-
-            </div>
-
-            <img class="card-design__img" src="images/catalog/new-design/beat-flat.jpg" alt="image beat flat">
-
-            <a class="card-design__link" href="#">Сlick areas</a>
-
-          </article>
-
-          <article class="card-design mix category-f" href="#">
-
-            <div class="card-design__content">
-
-              <h3 class="card-design__title">
-                Rattan Rocking
-                Chair
-              </h3>
-
-              <span class="card-design__text">
-                Classic
-              </span>
-
-            </div>
-
-            <img class="card-design__img" src="images/catalog/new-design/r02.jpg" alt="image chair">
-
-            <a class="card-design__link" href="#">Сlick areas</a>
-
-          </article>
-
-          <article class="card-design mix category-e" href="#">
-
-            <div class="card-design__content">
-
-              <h3 class="card-design__title">
-                Lampe Sur Pieds
-                Bamboo
-              </h3>
-
-              <span class="card-design__text">
-                Classic
-              </span>
-
-            </div>
-
-            <img class="card-design__img" src="images/catalog/new-design/A207-1.jpg" alt="image sofa">
-
-            <a class="card-design__link" href="#">Сlick areas</a>
-
-          </article>
-
-        </div>
-
-      </div>
-
-      <div class="video-review design__video-review" style="background-image: url('images/video-bg.jpg');">
-
-        <a class="video-review__btn" href="https://youtu.be/A8wbEZ2mGA4">
-
-          <svg class="video-review__play-btn">
-            <use xlink:href="#img-play-btn"></use>
-          </svg>
-
-        </a>
-
-      </div>
 
     </section>
 
@@ -957,17 +270,18 @@
 
         <div class="news__top">
 
-          <h2 class="title news__title">
+          <h2 class="title">
             Our Insights & Articles
           </h2>
 
           <a class="news__link" href="#">
 
-            <span class="news__title-link">
+            <span class="news__title">
               View All
             </span>
 
-            <svg class="news__arrow">
+            <svg class="news__arrow" width="6.1" height="10.97" viewBox="0 0 6.1 10.97"
+              xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
               <use xlink:href="#img-news-arrow"></use>
             </svg>
 
@@ -975,41 +289,43 @@
 
         </div>
 
-        <div class="news__inner">
+        <div class="news__items">
 
-          <article class="card-news">
+          <article class="news__item">
 
-            <a class="card-news__more-link" href="#">
+            <a class="news__more-link" href="#">
 
-              <img class="card-news__image" src="images/catalog/news/1.jpg" alt="photo image news">
+              <img class="news__image" src="images/catalog/news/1.jpg" alt="photo image news">
 
-              <span class="card-news__more-title" href="#">
+              <span class="news__more-title" href="#">
                 News
               </span>
 
-              <p class="card-news__text box-hiden">
+              <p class="news__text">
                 Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
               </p>
 
             </a>
 
-            <div class="card-news__meta">
+            <div class="news__meta">
 
-              <svg class="card-news__calendar-img">
+              <svg class="news__calendar-img" width="17" height="17" viewBox="0 0 17 17"
+                xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                 <use xlink:href="#img-calendar"></use>
               </svg>
 
-              <time datetime="2020-01-28" class="card-news__date">
+              <span class="news__date">
                 28 January, 2020
-              </time>
+              </span>
 
-              <a class="card-news__link card-news__link--author" href="#">
+              <a class="news__link news__link--autor" href="#">
 
-                <svg class="card-news__author-img">
+                <svg class="news__autor-img" width="15" height="17" viewBox="0 0 15 17"
+                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                   <use xlink:href="#img-admin"></use>
                 </svg>
 
-                <span class="card-news__author">
+                <span class="news__autor">
                   By admin
                 </span>
 
@@ -1019,38 +335,40 @@
 
           </article>
 
-          <article class="card-news">
+          <article class="news__item">
 
-            <a class="card-news__more-link" href="#">
+            <a class="news__more-link" href="#">
 
-              <img class="card-news__image" src="images/catalog/news/2.jpg" alt="photo image news">
+              <img class="news__image" src="images/catalog/news/2.jpg" alt="photo image news">
 
-              <span class="card-news__more-title" href="#">
+              <span class="news__more-title" href="#">
                 News
               </span>
 
-              <p class="card-news__text box-hiden">
+              <p class="news__text">
                 Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
               </p>
 
             </a>
 
-            <div class="card-news__meta">
+            <div class="news__meta">
 
-              <svg class="card-news__calendar-img">
+              <svg class="news__calendar-img" width="17" height="17" viewBox="0 0 17 17"
+                xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                 <use xlink:href="#img-calendar"></use>
               </svg>
 
-              <time datetime="2020-01-28" class="card-news__date">
+              <span class="news__date">
                 28 January, 2020
-              </time>
+              </span>
 
-              <a class="card-news__link card-news__link--author" href="#">
-                <svg class="card-news__author-img">
+              <a class="news__link news__link--autor" href="#">
+                <svg class="news__autor-img" width="15" height="17" viewBox="0 0 15 17"
+                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                   <use xlink:href="#img-admin"></use>
                 </svg>
 
-                <span class="card-news__author">
+                <span class="news__autor">
                   By admin
                 </span>
               </a>
@@ -1058,38 +376,40 @@
 
           </article>
 
-          <article class="card-news">
+          <article class="news__item">
 
-            <a class="card-news__more-link" href="#">
+            <a class="news__more-link" href="#">
 
-              <img class="card-news__image" src="images/catalog/news/3.png" alt="photo image news">
+              <img class="news__image" src="images/catalog/news/3.png" alt="photo image news">
 
-              <span class="card-news__more-title" href="#">
+              <span class="news__more-title" href="#">
                 News
               </span>
 
-              <p class="card-news__text  box-hiden">
+              <p class="news__text">
                 Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
               </p>
 
             </a>
 
-            <div class="card-news__meta">
+            <div class="news__meta">
 
-              <svg class="card-news__calendar-img">
+              <svg class="news__calendar-img" width="17" height="17" viewBox="0 0 17 17"
+                xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                 <use xlink:href="#img-calendar"></use>
               </svg>
 
-              <time datetime="2020-01-28" class="card-news__date">
+              <span class="news__date">
                 28 January, 2020
-              </time>
+              </span>
 
-              <a class="card-news__link card-news__link--author" href="#">
-                <svg class="card-news__author-img">
+              <a class="news__link news__link--autor" href="#">
+                <svg class="news__autor-img" width="15" height="17" viewBox="0 0 15 17"
+                  xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
                   <use xlink:href="#img-admin"></use>
                 </svg>
 
-                <span class="card-news__author">
+                <span class="news__autor">
                   By admin
                 </span>
               </a>
@@ -1104,23 +424,23 @@
           <ul class="partners__list">
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/1.png" alt="partner1">
+              <img src="images/partners/1.png" alt="partner1">
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/2.png" alt="partner2">
+              <img src="images/partners/2.png" alt="partner2">
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/3.png" alt="partner3">
+              <img src="images/partners/3.png" alt="partner3">
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/4.png" alt="partner4">
+              <img src="images/partners/4.png" alt="partner4">
             </li>
 
             <li class="partners__item">
-              <img class="partners__img" src="images/partners/5.png" alt="partner5">
+              <img src="images/partners/5.png" alt="partner5">
             </li>
 
           </ul>
@@ -1149,9 +469,9 @@
 
           <a class="contact__text contact__text--address" href="#">
 
-            <span class="contact__title">
+            <label class="contact__title">
               Address:
-            </span>
+            </label>
 
             4772 Wines Lane
             Houston, TX 77032
@@ -1159,28 +479,26 @@
 
           <a class="contact__text" href="tel:+8323475843">
 
-            <span class="contact__title">
+            <label class="contact__title">
               Telephone:
-            </span>
+            </label>
 
             +832-347-5843
           </a>
 
           <a class="contact__text" href="mailto:contact@Glee.com">
 
-            <span class="contact__title">
+            <label class="contact__title">
               Email:
-            </span>
+            </label>
 
             contact@Glee.com</a>
         </address>
 
         <div class="footer__item footer__item--links">
 
-          <p class="footer__title box-limit">
-            <span class="uppercase">
-              Services
-            </span>
+          <p class="footer__title">
+            <span class="uppercase">Services</span>
           </p>
 
           <ul class="footer__list">
@@ -1279,15 +597,14 @@
             <span class="uppercase">Newsletter</span>
           </p>
 
-          <p class="footer__text box-hiden">
+          <p class="footer__text">
             Subscribe by our newsletter and get
             update protidin.
           </p>
 
           <form class="footer__form" action="#">
-            <label for="subs-e" class="footer__label">Email address</label>
-            <input id="subs-e" class="footer__form-input" type="email" name="email" placeholder="Email address"
-              required>
+
+            <input class="footer__form-input" type="email" name="email" placeholder="Email address" required>
 
             <button class="footer__form-btn" type="submit">Subscribe</button>
 

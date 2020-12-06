@@ -1,43 +1,66 @@
 .top-products {
   padding: 64px 0 25px;
 
-  &__content {
+  &__inner {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -30px 45px 0;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 270px;
+  margin-bottom: 40px;
+  padding: 0px 15px 35px;
+  background-color: $white;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: $box-shadow;
   }
 
-  &__item {
-    position: relative;
-    min-width: 270px;
-    min-height: 380px;
-    margin: 0 30px 40px 0;
-    text-align: center;
-    background-color: $white;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    border-radius: 10px;
+  &:hover .card__link-box {
+    transform: translateX(0%);
+  }
+
+  &__img-box {
+    display: flex;
     overflow: hidden;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: $box-shadow;
-    }
-
-    &:hover .top-products__box {
-      transform: translateX(0%);
-    }
+    height: 280px;
+    margin-bottom: 15px;
   }
 
   &__img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 38%;
-    margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
   }
 
-  &__box {
+  &__title,
+  &__price {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: auto;
+    max-width: 270px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: $title;
+  }
+
+  &__price {
+    color: $default;
+  }
+
+  &__link-box {
     position: absolute;
     top: 49%;
     left: 0;
@@ -68,34 +91,13 @@
     }
   }
 
-  &__find {
-    width: 20px;
-    height: 20px;
-  }
-
-  &__card {
+  &__icon {
     width: 22px;
     height: 20px;
   }
 
-  &__heart {
-    width: 22px;
-    height: 18px;
+  &__icon--heart {
     margin-top: 2px;
-  }
-
-  &__title {
-    max-width: 270px;
-    margin-bottom: 10px;
-    padding: 0 10px;
-    padding-top: 109%;
-    font-size: 16px;
-    color: $title;
-    overflow: hidden;
-  }
-
-  &__price {
-    color: $default;
   }
 }
 
@@ -105,23 +107,23 @@
   &__inner {
     display: flex;
   }
+}
 
-  &__item {
-    position: relative;
-    width: 100%;
-    max-height: 387px;
-    max-width: 870px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 82px 0;
-    background-color: #feefe2;
+.card-review {
+  position: relative;
+  width: 100%;
+  min-height: 387px;
+  max-width: 870px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 82px 0;
+  background-color: #feefe2;
 
-    & + & {
-      margin-left: 30px;
-    }
+  &:not(:last-child) {
+    margin-right: 30px;
   }
 
   &__img {
@@ -129,6 +131,7 @@
     max-height: 410px;
     margin: -182px 10px 0 10px;
     object-fit: cover;
+
     &--indent {
       margin: -177px 50px 0 60px;
     }
@@ -142,19 +145,15 @@
   }
 
   &__title {
-    max-height: 70px;
     margin-bottom: 10px;
     font-size: 26px;
     @extend %dmsans-700;
-    overflow-y: auto;
   }
 
   &__text {
-    max-height: 80px;
     margin-bottom: 45px;
     line-height: 1.9;
     @extend %rubik-400;
-    overflow-y: auto;
   }
 
   &__link {

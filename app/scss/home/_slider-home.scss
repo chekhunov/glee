@@ -23,26 +23,29 @@
   }
 
   &__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     max-width: 440px;
-    max-height: 144px;
+    max-height: 140px;
     margin: 5px 0 25px;
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
     color: $title;
     @extend %rubik-500;
-    overflow: hidden;
   }
 
   &__descr {
     max-width: 380px;
-    max-height: 90px;
     margin-bottom: 60px;
     font-size: 18px;
     line-height: 1.6;
     color: #436372;
     @extend %rubik-400;
-    overflow-y: auto;
   }
 
   &__link {
@@ -65,9 +68,75 @@
   }
 
   &__img {
+    max-width: 640px;
     margin-top: -21%;
     margin-left: auto;
     object-fit: cover;
+  }
+
+  &__list-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+    background-color: $bg;
+  }
+  &__item-info {
+    display: flex;
+    min-width: 300px;
+  }
+
+  &__sup-info {
+    width: 51px;
+    height: 53px;
+  }
+
+  &__car-info {
+    width: 54px;
+    height: 37px;
+  }
+
+  &__secure-info {
+    width: 53px;
+    height: 52px;
+  }
+
+  &__sup-info,
+  &__car,
+  &__secure-info {
+    display: block;
+    margin-top: 5px;
+    margin-right: 20px;
+  }
+
+  &__inner-info {
+    margin-left: 8px;
+  }
+
+  &__title-info {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    max-width: 208px;
+    max-height: 58px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #414141;
+    @extend %dmsans-700;
+  }
+
+  &__text-info {
+    max-width: 208px;
+    line-height: 1.9;
+    color: #585858;
+    @extend %dmsans-400;
+
+    &--indent {
+      max-width: 220px;
+    }
   }
 }
 
@@ -107,67 +176,6 @@
       button {
         background-color: $white;
       }
-    }
-  }
-}
-
-.info {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 0;
-  background-color: $bg;
-
-  &__item {
-    display: flex;
-    min-width: 300px;
-  }
-
-  &__sup {
-    width: 51px;
-    height: 53px;
-  }
-
-  &__car {
-    width: 54px;
-    height: 37px;
-  }
-
-  &__secure {
-    width: 53px;
-    height: 52px;
-  }
-
-  &__sup,
-  &__car,
-  &__secure {
-    display: block;
-    margin-top: 5px;
-    margin-right: 20px;
-  }
-
-  &__inner {
-    margin-left: 8px;
-  }
-
-  &__title {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #414141;
-    @extend %dmsans-700;
-    overflow: hidden;
-  }
-
-  &__text {
-    max-width: 208px;
-    max-height: 60px;
-    line-height: 1.9;
-    color: #585858;
-    @extend %dmsans-400;
-    overflow-x: auto;
-
-    &--indent {
-      max-width: 220px;
     }
   }
 }
