@@ -2,6 +2,14 @@
   padding: 50px 0 50px;
   box-shadow: inset 0em -442px #fef7f0;
 
+  @include _1260 {
+    box-shadow: none;
+  }
+
+  @include _560 {
+    padding: 50px 0 0;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -34,6 +42,11 @@
     display: flex;
     margin: 0 -27px 94px 0;
     padding-top: 44px;
+
+    @include _1260 {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -43,6 +56,10 @@
   background-color: $white;
   border-radius: 5px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+  @include _1260 {
+    margin-bottom: 30px;
+  }
 
   &:hover {
     box-shadow: $box-shadow;
@@ -68,8 +85,8 @@
   }
 
   &__text {
-    min-height: 97px;
     max-width: 315px;
+    min-height: 97px;
     margin-left: 28px;
     padding: 20px 28px 5px 0;
     font-size: 18px;
@@ -129,15 +146,31 @@
 .partners {
   margin-right: 30px;
   padding-bottom: 40px;
+
+  @include _1260 {
+    flex-flow: wrap;
+    margin-right: 0;
+  }
+
   &__list {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @include _1260 {
+      flex-flow: wrap;
+      margin: 20px;
+      padding: 10px;
+    }
   }
 
   &__img {
     max-width: 170px;
     max-height: 85px;
     object-fit: cover;
+
+    @include _1260 {
+      margin-bottom: 30px;
+    }
   }
 }

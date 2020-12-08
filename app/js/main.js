@@ -1,5 +1,11 @@
 $(function () {
 
+  $(".menu-nav__popup").on("click", function (e) {
+    e.preventDefault();
+    $(".menu").toggleClass("menu--active");
+    $("main").toggleClass("main--active");
+  });
+
 
   $(".slider-home__items").slick({
     dots: true,

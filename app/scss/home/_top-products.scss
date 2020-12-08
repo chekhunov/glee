@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 45px;
+
+    @include _860 {
+      justify-content: space-around;
+    }
   }
 }
 
@@ -106,14 +110,18 @@
 
   &__inner {
     display: flex;
+
+    @include _1500 {
+      flex-direction: column;
+    }
   }
 }
 
 .card-review {
   position: relative;
   width: 100%;
-  min-height: 387px;
   max-width: 870px;
+  min-height: 387px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +129,13 @@
   margin: 0 auto;
   padding: 82px 0;
   background-color: #feefe2;
+
+  @include _1500 {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 40px;
+    justify-content: space-evenly;
+  }
 
   &:not(:last-child) {
     margin-right: 30px;
@@ -132,8 +147,25 @@
     margin: -182px 10px 0 10px;
     object-fit: cover;
 
+    @include _1500 {
+      margin: 0px 10px 0 10px;
+    }
+
+    @include _860 {
+      max-width: 165px;
+      max-height: 200px;
+    }
+
+    @include _560 {
+      display: none;
+    }
+
     &--indent {
       margin: -177px 50px 0 60px;
+
+      @include _1500 {
+        margin: 0px 10px 0 10px;
+      }
     }
   }
 
@@ -142,6 +174,11 @@
     margin-top: -20px;
     padding: 10px 10px;
     color: $title;
+
+    @include _560 {
+      height: 260px;
+      overflow-x: hidden;
+    }
   }
 
   &__title {

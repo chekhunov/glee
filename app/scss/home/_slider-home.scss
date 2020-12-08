@@ -7,6 +7,15 @@
     background-image: url("../images/slider/ellipse-bg.png");
     background-repeat: no-repeat;
     background-position: 84% 53%;
+
+    @include _1260 {
+      min-height: 670px;
+      background-image: none;
+    }
+
+    @include _860 {
+      min-height: 450px;
+    }
   }
 
   &__items {
@@ -20,6 +29,33 @@
     max-height: 400px;
     margin: auto;
     padding: 0px 0 45px;
+
+    @include _1260 {
+      max-height: 350px;
+      padding: 15px;
+    }
+  }
+
+  &__item {
+    @include _1260 {
+      padding: 30px;
+    }
+  }
+
+  &__about {
+    @include _1260 {
+      height: 350px;
+    }
+
+    @include _860 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include _560 {
+      margin-top: 50px;
+    }
   }
 
   &__title {
@@ -37,6 +73,18 @@
     text-transform: uppercase;
     color: $title;
     @extend %rubik-500;
+
+    @include _1260 {
+      max-width: 350px;
+      max-height: 95px;
+      font-size: 50px;
+    }
+
+    @include _860 {
+      max-width: 500px;
+      max-height: 60px;
+      font-size: 30px;
+    }
   }
 
   &__descr {
@@ -46,6 +94,11 @@
     line-height: 1.6;
     color: #436372;
     @extend %rubik-400;
+
+    @include _860 {
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
   }
 
   &__link {
@@ -59,6 +112,11 @@
     &:hover {
       background-color: #7c849b;
     }
+
+    @include _860 {
+      padding: 10px;
+      border-radius: 5px;
+    }
   }
 
   &__arrow {
@@ -68,10 +126,21 @@
   }
 
   &__img {
-    max-width: 640px;
+    max-width: 60%;
     margin-top: -21%;
     margin-left: auto;
     object-fit: cover;
+
+    @include _1260 {
+      max-width: 40%;
+      margin-top: -28%;
+      margin-left: 60%;
+      margin-bottom: 80px;
+    }
+
+    @include _860 {
+      opacity: 0;
+    }
   }
 
   &__list-info {
@@ -80,10 +149,34 @@
     align-items: center;
     padding: 40px 0;
     background-color: $bg;
+
+    @include _1260 {
+      flex-direction: column;
+    }
+
+    @include _860 {
+      padding: 45px;
+    }
   }
+
   &__item-info {
     display: flex;
     min-width: 300px;
+
+    @include _1260 {
+      min-width: 100%;
+      align-items: flex-start;
+      margin-left: 70%;
+      margin-bottom: 30px;
+    }
+
+    @include _860 {
+      margin-left: 10%;
+    }
+
+    @include _560 {
+      margin-left: 0;
+    }
   }
 
   &__sup-info {
@@ -102,11 +195,15 @@
   }
 
   &__sup-info,
-  &__car,
+  &__car-info,
   &__secure-info {
     display: block;
     margin-top: 5px;
     margin-right: 20px;
+
+    @include _560 {
+      display: none;
+    }
   }
 
   &__inner-info {
@@ -134,6 +231,10 @@
     color: #585858;
     @extend %dmsans-400;
 
+    @include _1260 {
+      max-width: 100%;
+    }
+
     &--indent {
       max-width: 220px;
     }
@@ -145,10 +246,18 @@
   left: 0;
   right: 0;
   bottom: -50%;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
   padding: 35px;
+
+  @include _860 {
+    bottom: -15%;
+  }
+
+  @include _560 {
+    bottom: 70%;
+  }
 
   li {
     padding: 0 5px;

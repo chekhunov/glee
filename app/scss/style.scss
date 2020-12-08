@@ -3,6 +3,7 @@
 @import "reset"; //сброс всех стилей
 @import "libs"; //подключение сторонних библиотек
 @import "global"; // подключение глобальных стилей типо reset.css, то что на body для сылок
+@import "mixins";
 @import "components/header";
 @import "components/footer";
 @import "home/home";
