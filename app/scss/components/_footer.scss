@@ -3,21 +3,46 @@
     display: flex;
     padding: 95px 0 50px;
     border-bottom: 1px solid #dae4e9;
+
+    @include _1260 {
+      justify-content: space-between;
+    }
+
+    @include _860 {
+      flex-wrap: wrap;
+    }
+
+    @include _560 {
+      flex-direction: column;
+      justify-content: center;
+      flex-flow: wrap;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 0 50px;
+    }
   }
 
   &__item {
-    font-size: 14px;
     margin-bottom: 10px;
+    font-size: 14px;
     @extend %rubik-400;
 
     &--links {
       max-width: 120px;
       margin-right: 180px;
+
+      @include _1260 {
+        margin-right: 30px;
+      }
     }
 
     &--form {
       max-width: 270px;
       margin-left: 30px;
+
+      @include _1260 {
+        margin-left: 0;
+      }
     }
   }
 
@@ -40,6 +65,10 @@
   &__logo {
     display: block;
     margin: -16px 0 27px 0;
+
+    @include _560 {
+      display: none;
+    }
   }
 
   &__text {
@@ -84,8 +113,8 @@
   &__form-btn {
     max-width: 100px;
     height: 40px;
-    font-size: 14px;
     padding: 6px 20px;
+    font-size: 14px;
     background-color: $default;
     color: $white;
     border: none;
@@ -112,6 +141,10 @@
     line-height: 2.3;
     color: $links;
     @extend %rubik-400;
+
+    @include _860 {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -140,8 +173,8 @@
     color: $links;
 
     &:hover {
-      text-decoration: underline;
       color: $default;
+      text-decoration: underline;
     }
   }
 }
@@ -150,6 +183,14 @@
   max-width: 200px;
   margin-right: 100px;
   @extend %rubik-400;
+
+  @include _1260 {
+    margin-right: 30px;
+  }
+
+  @include _560 {
+    margin-bottom: 30px;
+  }
 
   &__text {
     display: block;

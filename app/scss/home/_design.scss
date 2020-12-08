@@ -10,6 +10,10 @@
     flex-wrap: wrap;
     margin-right: -30px;
     margin-bottom: 81px;
+
+    @include _1260 {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -71,10 +75,10 @@
   }
 
   &__img {
-    border-radius: 5px;
-    height: 246px;
     width: 370px;
+    height: 246px;
     object-fit: cover;
+    border-radius: 5px;
   }
 }
 
@@ -94,9 +98,14 @@
 
   &__btn {
     border-radius: 50%;
+    transform: box-shadow 0.3s;
 
     &:hover {
       box-shadow: inset 0px 0px 15px 20px $white;
+
+      @include _560 {
+        box-shadow: none;
+      }
     }
   }
 
@@ -104,5 +113,21 @@
     display: block;
     max-width: 127px;
     max-height: 127px;
+    color: $default;
+    transition: color 0.3s;
+
+    &:hover {
+      @include _560 {
+        color: azure;
+      }
+    }
+
+    @include _1260 {
+      transform: scale(0.8);
+    }
+
+    @include _560 {
+      transform: scale(0.5);
+    }
   }
 }

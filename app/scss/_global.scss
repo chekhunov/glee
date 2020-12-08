@@ -1,3 +1,5 @@
+@import "mixins";
+
 html,
 body {
   height: 100%; // 1 задаем чтоб footer прижать к низу
@@ -10,6 +12,26 @@ body {
   color: $default;
   background-color: $white;
   @extend %dmsans-500;
+}
+
+main {
+  @include _1260 {
+    position: relative;
+    top: 145px;
+    transition: 0.5s;
+    z-index: 0;
+
+    &.main--active {
+      transform: translateX(-20%);
+    }
+  }
+
+  @include _560 {
+    top: 0;
+    &.main--active {
+      transform: translateX(-30%);
+    }
+  }
 }
 
 .container {
@@ -41,28 +63,39 @@ button {
     max-width: 146px;
     max-height: 39px;
     object-fit: cover;
+    @include _560 {
+      display: none;
+    }
   }
 }
 
 .title {
-  display: -webkit-box;     
-  -webkit-line-clamp: 1; 
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 
-  max-height: 50px;      
+  max-height: 50px;
   margin: 0 auto;
   padding: 0 5px;
   font-size: 36px;
   text-align: center;
   color: #191919;
   @extend %dmsans-700;
+
+  @include _560 {
+    font-size: 20px;
+  }
 }
 
 .category {
   margin: 25px 0 75px;
   text-align: center;
+
+  @include _560 {
+    margin-bottom: 50px;
+  }
 
   &__btn {
     color: #8b8b8b;
@@ -76,8 +109,12 @@ button {
       border-color: #8b8b8b;
     }
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 16px;
+
+      @include _560 {
+        margin-right: 0;
+      }
     }
   }
 
@@ -85,4 +122,3 @@ button {
     color: #1a1a1a;
   }
 }
-

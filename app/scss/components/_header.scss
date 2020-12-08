@@ -5,6 +5,19 @@
     align-items: center;
     padding: 48px 0px 46px;
   }
+
+  @include _1260 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  @include _560 {
+    top: -145px;
+  }
 }
 
 .menu {
@@ -14,9 +27,43 @@
   max-width: 1140px;
   margin-right: -8%;
 
+  @include _1260 {
+    position: fixed;
+    top: 145px;
+    left: 80%;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    transition: 0.5s;
+    transform: translateX(100%);
+    z-index: 1;
+  }
+
+  @include _560 {
+    top: 0;
+    left: 60%;
+    width: 40%;
+    padding-top: 70px;
+  }
+
+  &--active {
+    transform: translateX(0%);
+  }
+
   &__list {
     display: flex;
     margin-top: -5px;
+
+    @include _1260 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      height: 50%;
+    }
   }
 
   &__item {
@@ -29,12 +76,27 @@
     }
   }
 
+  &__item--adapt {
+    display: none;
+
+    @include _560 {
+      display: initial;
+    }
+  }
+
   &__link {
     font-size: 15px;
     color: #436372;
     border-bottom: 1px solid transparent;
     transition: color 0.5s, border-color 0.5s;
     @extend %rubik-500;
+
+    @include _1260 {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: #436372;
+    }
 
     &:hover {
       color: $default;
@@ -50,16 +112,20 @@
   &__item {
     display: flex;
     justify-content: center;
-    margin-right: 20px;
     align-items: center;
+    margin-right: 20px;
     padding-top: 16px;
     transition: background-color 0.5s;
 
     &--heart {
       min-width: 178px;
-      height: 51;
+      height: 51px;
       background-color: #fcd7b6;
       border-radius: 50px;
+
+      @include _560 {
+        display: none;
+      }
     }
     &:hover {
       background-color: $default;
@@ -116,6 +182,10 @@
       padding-bottom: 6px;
       background-color: #edf1f4;
       border-radius: 50%;
+
+      @include _560 {
+        display: none;
+      }
     }
   }
 
@@ -134,17 +204,26 @@
   }
 
   &__popup {
-    width: 51px;
-    height: 51px;
+    width: 50px;
+    height: 50px;
     background-color: $default;
+    color: $white;
     border-radius: 50%;
     border: none;
     outline: $white;
-    color: $white;
     transition: color 0.5s;
 
     &:hover {
       color: $title;
+    }
+
+    @include _560 {
+      position: absolute;
+      top: 160px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      box-shadow: $box-shadow;
     }
   }
 }
