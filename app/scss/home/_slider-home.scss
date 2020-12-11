@@ -273,7 +273,7 @@
       transition: bacground-color 0.5s, opacity 0.5s;
 
       &:focus {
-        outline: $outline-slider; //переменная в _global
+        outline: $outline-slider;
       }
       &:hover {
         background-color: $white;

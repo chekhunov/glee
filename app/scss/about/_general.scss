@@ -1,0 +1,182 @@
+.general-info {
+  padding: 120px 0;
+
+  @include _560 {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+    margin-bottom: 120px;
+
+    @include _1260 {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    max-width: 570px;
+    height: 100%;
+    max-height: 680px;
+    margin-right: 40px;
+    object-fit: cover;
+
+    @include _560 {
+      display: none;
+    }
+  }
+
+  &__experience {
+    margin-top: 55px;
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: -5px;
+
+    @include _1260 {
+      justify-content: center;
+    }
+  }
+
+  &__number {
+    margin-right: 35px;
+    font-size: 140px;
+    color: $default;
+    @extend %rubik-700;
+  }
+
+  &__list li {
+    margin-bottom: -10px;
+    font-size: 16px;
+    color: $title;
+    @extend %rubik-400;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    line-height: 1;
+    margin-bottom: 38px;
+    color: $title;
+    text-align: start;
+
+    @include _1260 {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    padding: 0px 5px 50px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $title;
+    @extend %rubik-400;
+  }
+
+  &__line {
+    width: 90%;
+    margin-left: 0;
+    margin-bottom: 25px;
+    color: #e6eaf0;
+    border: 1px solid;
+
+    @include _1260 {
+      width: 100%;
+    }
+  }
+
+  &__nested {
+    display: flex;
+
+    @include _1260 {
+      justify-content: center;
+    }
+
+    @include _560 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    @include _560 {
+      margin-right: 20px;
+    }
+  }
+
+  &__icon {
+    width: 44px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    @include _860 {
+      margin-bottom: 10px;
+    }
+
+    &--alignment {
+      align-items: center;
+    }
+  }
+
+  &__num {
+    font-size: 36px;
+    color: $title;
+
+    &--col {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__about {
+    font-size: 18px;
+    color: #4c4c4c;
+    @extend %dmsans-700;
+  }
+
+  &__vert-line {
+    height: 80px;
+    margin: 0 25px;
+    color: #e6eaf0;
+    border: 1px solid;
+
+    @include _560 {
+      display: none;
+    }
+  }
+
+  &__row {
+    background-color: $outline-slider;
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-around;
+    margin-left: -25px;
+    padding: 85px 0 80px;
+
+    @include _860 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col-icon {
+    width: 79px;
+    height: 64px;
+    margin-bottom: 10px;
+
+    &--badge {
+      margin-left: 13px;
+    }
+  }
+}
