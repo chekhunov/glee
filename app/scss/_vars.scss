@@ -4,9 +4,8 @@ $default: #a3bbc8; //шрифт
 $title: #243f4d; // заголовки
 $bg: #fef7f0; // темные места фона
 $black: #000000;
-$outline-slider:  #fcd7b6;
+$outline-slider: #fcd7b6;
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
-
 
 %dmsans-400 {
   font-family: "DMSans-Regular", sans-serif;
@@ -23,9 +22,19 @@ $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
   font-weight: 700;
 }
 
+%poppins-600 {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-weight: 600;
+}
+
 %poppins-700 {
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
+}
+
+%rubik-300 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
 }
 
 %rubik-400 {
@@ -36,6 +45,11 @@ $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 %rubik-500 {
   font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
 }
 
 @function max($numbers...) {
