@@ -1,33 +1,49 @@
-const {src, dest, watch, parallel, series}  = require('gulp');
+const { src, dest, watch, parallel, series } = require("gulp");
 
-const scss                = require('gulp-sass');
-const concat              = require('gulp-concat');
-const autoprefixer        = require('gulp-autoprefixer');
-const uglify              = require('gulp-uglify-es').default;
-const imagemin = require('gulp-imagemin');
-const del = require('del');
-const browserSync         = require('browser-sync').create();
+const fileinclude = require("gulp-file-include"); //сборка html
+const scss = require("gulp-sass"); //сборка css
+const concat = require("gulp-concat");
+const autoprefixer = require("gulp-autoprefixer");
+const uglify = require("gulp-uglify-es").default;
+const imagemin = require("gulp-imagemin");
+const del = require("del");
+const browserSync = require("browser-sync").create();
 
+function html() {
+  return src([
+    "app/html/pages/index.html",
+    "app/html/pages/about.html"
+  ])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("app/"));
+}
 
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'app/'
+      baseDir: "app/",
     },
-    notify: false
-  })
+    notify: false,
+  });
 }
 
 function styles() {
-  return src('app/scss/style.scss')
-    .pipe(scss({outputStyle: 'compressed'}))
-    .pipe(concat('style.min.css'))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 versions'],
-      grid: true
-    }))
-    .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+  return src("app/scss/style.scss")
+    .pipe(scss({ outputStyle: "compressed" }))
+    .pipe(concat("style.min.css"))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 10 versions"],
+        grid: true,
+      })
+    )
+    .pipe(dest("app/css"))
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -55,47 +71,40 @@ function images() {
         imagemin.mozjpeg({ quality: 75, progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
-          plugins: [
-            { removeViewBox: true }, 
-            { cleanupIDs: false }
-          ],
-        })
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+        }),
       ])
     )
     .pipe(dest("dist/images")); //сюда будут скидываться обработанные файлы из папки images
 }
 
 function build() {
-  return src([
-    'app/**/*.html',
-    'app/css/style.min.css',
-    'app/js/main.min.js',
-  ], {base: 'app'}) //чтоб при переносе файлов в dist они оказались в своих первонос=чальных директориях
-  .pipe(dest('dist')) //переносим сюда все сконвертированные файлы проекта которые указаны выше *.html, style.min.js, main.min.js
+  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], {
+    base: "app",
+  }) //чтоб при переносе файлов в dist они оказались в своих первонос=чальных директориях
+    .pipe(dest("dist")); //переносим сюда все сконвертированные файлы проекта которые указаны выше *.html, style.min.js, main.min.js
 }
 
 function cleanDist() {
-  return del('dist')
+  return del("dist");
 }
-
 
 //монитор событий за кем следит
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(["app/scss/**/*.scss"], styles);
+  watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
+  watch(["app/html/**/*"], html);
 }
-
 
 exports.styles = styles;
 exports.scripts = scripts;
+exports.html = html;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build); //запускает глобально после команды build стерает папкуdist, конвертит images, после запускает default
 
-exports.default =  parallel(styles, scripts, browsersync, watching); //запускает функции
-
+exports.default = parallel(html, styles, scripts, browsersync, watching); //запускает функции
 
 //чтоб запустить сборку надо в консоль "gulp build"
