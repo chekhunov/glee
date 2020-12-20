@@ -5,12 +5,15 @@
 @import "global"; // подключение глобальных стилей типо reset.css, то что на body для сылок
 @import "mixins";
 @import "components/header";
+@import "components/top";
 @import "components/card";
 @import "components/card-review";
 @import "components/card-team";
+@import "components/card-news";
 @import "components/news";
 @import "components/card-design";
 @import "components/partners";
 @import "components/footer";
 @import "home/home";
 @import "about/about";
+@import "login/login";

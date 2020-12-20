@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Glee | LOGIN</title>
+</head>
+
+<body>
+
+  @@include('../components/_header.html')
+
+  <main class="main">
+
+    <div class="top">
+
+      <div class="container">
+
+        <h1 class="top__title">
+
+          Log in
+
+        </h1>
+
+        <div class="breadcrumbs">
+
+          <ul class="breadcrumbs__list">
+
+            <li class="breadcrumbs__item">
+
+              <a class="breadcrumbs__link" href="#">
+                Home
+              </a>
+
+            </li>
+
+            <li class="breadcrumbs__item breadcrumbs__item--login">
+
+              <span class="breadcrumbs__link" href="#">
+                Log in
+              </span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <section class="modal">
+
+      <div class="container">
+
+        <form class="modal__form" action="#">
+
+          <label for="log-u" class="modal__label">
+
+            Username or email address*
+
+            <input id="log-u" class="modal__input" type="email" name="email" required>
+
+          </label>
+
+          <label for="log-p" class="modal__label">
+
+            Password*
+
+            <input id="log-p" class="modal__input" type="password" name="password" required>
+
+          </label>
+
+          <button class="modal__btn" type="submit">
+
+            Login
+
+          </button>
+
+          <div class="modal__label-box">
+
+            <label for="check-r" class="modal__label modal__label--box">
+
+              <input id="check-r" class="modal__input-checkbox" type="checkbox" name="checkbox">
+
+              Remember me
+
+            </label>
+
+            <a class="modal__error" href="#">
+
+              Lost your password?
+
+            </a>
+
+          </div>
+
+          <p class="modal__text">
+
+            Not registered? No problem
+
+          </p>
+
+          <button class="modal__btn modal__btn--create" type="submit">
+
+            Create an account
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+    <section class="news news--login">
+
+      <div class="container">
+
+        @@include('../components/_partners.html')
+
+      </div>
+
+    </section>
+
+  </main>
+
+  @@include('../components/_footer.html')
+
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

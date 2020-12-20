@@ -2,7 +2,7 @@
   padding: 50px 0 50px;
   box-shadow: inset 0em -442px #fef7f0;
 
-  @include _1260 {
+  @include _1200 {
     box-shadow: none;
   }
 
@@ -43,103 +43,15 @@
     margin: 0 -27px 94px 0;
     padding-top: 44px;
 
-    @include _1260 {
+    @include _1200 {
       flex-wrap: wrap;
       justify-content: space-evenly;
     }
   }
 }
 
-.card-news {
-  max-width: 370px;
-  margin-right: 30px;
-  background-color: $white;
-  border-radius: 5px;
-  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-
-  @include _1260 {
-    margin-bottom: 30px;
-  }
-
-  &:hover {
-    box-shadow: $box-shadow;
-  }
-
-  &__more-title {
-    display: -webkit-inline-box;
-    height: 30px;
-    margin: -7px 30px 0;
-    padding: 7px 28px;
-    background-color: $default;
-    color: $white;
-    text-transform: uppercase;
-    border-radius: 25px;
-  }
-
-  &__image {
-    width: 370px;
-    height: 250px;
-    margin-bottom: -10px;
-    border-radius: 5px 5px 0 0;
-    object-fit: cover;
-  }
-
-  &__text {
-    max-width: 315px;
-    min-height: 97px;
-    margin-left: 28px;
-    padding: 20px 28px 5px 0;
-    font-size: 18px;
-    line-height: 1.2;
-    color: #262626;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  &__meta {
-    display: flex;
-    align-items: center;
-    padding: 20px 35px 21px;
-    font-size: 12px;
-    color: #222933;
-    text-transform: uppercase;
-    @extend %rubik-400;
-  }
-
-  &__date {
-    margin-right: 28px;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-
-    &--author {
-      color: #222933;
-    }
-  }
-
-  &__author {
-    border-bottom: 1px solid transparent;
-
-    &:hover {
-      border-color: #222933;
-    }
-  }
-
-  &__author-img {
-    width: 15px;
-    height: 17px;
-  }
-
-  &__calendar-img {
-    width: 17px;
-    height: 17px;
-    margin-bottom: -2px;
-  }
-
-  &__author-img,
-  &__calendar-img {
-    margin: -2px 5px 0px 0;
-  }
+.slick-track {
+  display: flex;
+  align-items: center;
 }
 

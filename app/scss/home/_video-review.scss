@@ -1,4 +1,3 @@
-
 .video-review {
   --ratio: 505 / 1920;
   width: 100%;
@@ -33,18 +32,18 @@
     color: $default;
     transition: color 0.3s;
 
-    &:hover {
-      @include _560 {
-        color: azure;
-      }
-    }
-
-    @include _1260 {
+    @include _1200 {
       transform: scale(0.8);
     }
 
     @include _560 {
       transform: scale(0.5);
+    }
+
+    &:hover {
+      @include _560 {
+        color: azure;
+      }
     }
   }
 }

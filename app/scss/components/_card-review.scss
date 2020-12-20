@@ -11,13 +11,6 @@
   padding: 82px 0;
   background-color: #feefe2;
 
-  @include _1500 {
-    max-width: 100%;
-    margin: 0;
-    margin-bottom: 40px;
-    justify-content: space-evenly;
-  }
-
   &:not(:last-child) {
     margin-right: 30px;
   }
@@ -27,10 +20,6 @@
     max-height: 410px;
     margin: -182px 10px 0 10px;
     object-fit: cover;
-
-    @include _1500 {
-      margin: 0px 10px 0 10px;
-    }
 
     @include _860 {
       max-width: 165px;
@@ -42,11 +31,8 @@
     }
 
     &--indent {
-      margin: -177px 50px 0 60px;
-
-      @include _1500 {
-        margin: 0px 10px 0 10px;
-      }
+      margin-top: -177px;
+      padding: 0 50px 0 60px;
     }
   }
 

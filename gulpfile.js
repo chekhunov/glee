@@ -6,13 +6,28 @@ const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
+const svgSprite = require('gulp-svg-sprite');
 const del = require("del");
 const browserSync = require("browser-sync").create();
+const { pipe } = require("stdout-stream");
+
+function svgSprites() {
+  return src(["app/images/**/*.svg"])
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: "../sprite.svg"
+        }
+      }
+    }))
+    .pipe(dest('./app/images'))
+}
 
 function html() {
   return src([
     "app/html/pages/index.html",
-    "app/html/pages/about.html"
+    "app/html/pages/about.html",
+    "app/html/pages/login.html"
   ])
     .pipe(
       fileinclude({
@@ -94,6 +109,7 @@ function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/html/**/*"], html);
+  watch(["app/images/**/*.svg"], svgSprites);
 }
 
 exports.styles = styles;
@@ -105,6 +121,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build); //запускает глобально после команды build стерает папкуdist, конвертит images, после запускает default
 
-exports.default = parallel(html, styles, scripts, browsersync, watching); //запускает функции
+exports.default = parallel(html, styles, scripts, browsersync, svgSprites, watching); //запускает функции
 
 //чтоб запустить сборку надо в консоль "gulp build"

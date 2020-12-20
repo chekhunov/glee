@@ -18,9 +18,5 @@
 
   &__inner {
     display: flex;
-
-    @include _1500 {
-      flex-direction: column;
-    }
   }
 }
