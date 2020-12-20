@@ -1,23 +1,17 @@
 @import "about/general";
 @import "about/team";
 
-.menu {
-  
-  &--about {
-    margin-right: -10%;
+.breadcrumbs {
+  &__item {
+    &--about{
+      display: inline;
+      color: #888c91;
+    }
   }
 }
 
-.top {
-  height: 125px;
-  display: flex;
-  align-items: center;
-  background-color: #edf1f4;
-
-  &__title {
-    margin-top: -10px;
-    font-size: 36px;
-    color: #222933;
-    @extend %rubik-300;
+.menu {
+  &--about {
+    margin-right: -10%;
   }
 }

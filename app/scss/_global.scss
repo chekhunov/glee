@@ -3,6 +3,10 @@
 html,
 body {
   height: 100%; // 1 задаем чтоб footer прижать к низу
+
+  @include _1200 {
+    overflow-x: hidden;
+  }
 }
 
 body {
@@ -15,9 +19,8 @@ body {
 }
 
 main {
-  @include _1260 {
+  @include _1200 {
     position: relative;
-    top: 145px;
     transition: 0.5s;
     z-index: 0;
 
@@ -137,23 +140,27 @@ button {
   }
 
   &__item {
-    &::after {
+    &::before {
       content: "/";
+      color: #222933;
     }
-    &:not(:last-child) {
-      margin-right: 5px;
+    &:not(:first-child) {
+      margin-left: 5px;
 
-      &::after {
+      &::before {
         margin-left: 5px;
+        margin-right: 5px;
       }
     }
 
-    &:last-child {
-      color: #888c91;
-
-      &::after {
+    &:first-child {
+      &:before {
         content: "";
       }
+    }
+    
+    &:last-child {
+      color: #888c91;
     }
   }
 }

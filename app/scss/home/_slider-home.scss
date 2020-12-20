@@ -1,4 +1,5 @@
 .slider-home {
+  padding-top: 145px;
   &__inner {
     position: relative;
     width: 100%;
@@ -8,7 +9,7 @@
     background-repeat: no-repeat;
     background-position: 84% 53%;
 
-    @include _1260 {
+    @include _1200 {
       min-height: 670px;
       background-image: none;
     }
@@ -30,20 +31,20 @@
     margin: auto;
     padding: 0px 0 45px;
 
-    @include _1260 {
+    @include _1200 {
       max-height: 350px;
       padding: 15px;
     }
   }
 
   &__item {
-    @include _1260 {
+    @include _1200 {
       padding: 30px;
     }
   }
 
   &__about {
-    @include _1260 {
+    @include _1200 {
       height: 350px;
     }
 
@@ -74,7 +75,7 @@
     color: $title;
     @extend %rubik-500;
 
-    @include _1260 {
+    @include _1200 {
       max-width: 350px;
       max-height: 95px;
       font-size: 50px;
@@ -131,7 +132,7 @@
     margin-left: auto;
     object-fit: cover;
 
-    @include _1260 {
+    @include _1200 {
       max-width: 40%;
       margin-top: -28%;
       margin-left: 60%;
@@ -150,7 +151,7 @@
     padding: 40px 0;
     background-color: $bg;
 
-    @include _1260 {
+    @include _1200 {
       flex-direction: column;
     }
 
@@ -163,7 +164,7 @@
     display: flex;
     min-width: 300px;
 
-    @include _1260 {
+    @include _1200 {
       min-width: 100%;
       align-items: flex-start;
       margin-left: 70%;
@@ -231,7 +232,7 @@
     color: #585858;
     @extend %dmsans-400;
 
-    @include _1260 {
+    @include _1200 {
       max-width: 100%;
     }
 

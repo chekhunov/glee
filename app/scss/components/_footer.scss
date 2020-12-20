@@ -4,7 +4,7 @@
     padding: 95px 0 50px;
     border-bottom: 1px solid #dae4e9;
 
-    @include _1260 {
+    @include _1200 {
       justify-content: space-between;
     }
 
@@ -31,7 +31,7 @@
       max-width: 120px;
       margin-right: 180px;
 
-      @include _1260 {
+      @include _1200 {
         margin-right: 30px;
       }
     }
@@ -40,7 +40,7 @@
       max-width: 270px;
       margin-left: 30px;
 
-      @include _1260 {
+      @include _1200 {
         margin-left: 0;
       }
     }
@@ -184,7 +184,7 @@
   margin-right: 100px;
   @extend %rubik-400;
 
-  @include _1260 {
+  @include _1200 {
     margin-right: 30px;
   }
 

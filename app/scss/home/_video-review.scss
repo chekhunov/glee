@@ -1,0 +1,49 @@
+.video-review {
+  --ratio: 505 / 1920;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vw * var(--ratio));
+  max-height: var(--ratio);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  object-fit: cover;
+
+  &__btn {
+    border-radius: 50%;
+    transform: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: inset 0px 0px 15px 20px $white;
+
+      @include _560 {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__play-btn {
+    display: block;
+    max-width: 127px;
+    max-height: 127px;
+    color: $default;
+    transition: color 0.3s;
+
+    @include _1200 {
+      transform: scale(0.8);
+    }
+
+    @include _560 {
+      transform: scale(0.5);
+    }
+
+    &:hover {
+      @include _560 {
+        color: azure;
+      }
+    }
+  }
+}
