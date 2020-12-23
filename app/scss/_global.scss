@@ -3,10 +3,6 @@
 html,
 body {
   height: 100%; // 1 задаем чтоб footer прижать к низу
-
-  @include _1200 {
-    overflow-x: hidden;
-  }
 }
 
 body {
@@ -66,8 +62,10 @@ button {
     max-width: 146px;
     max-height: 39px;
     object-fit: cover;
+
     @include _560 {
-      display: none;
+      max-width: 85px;
+      margin: 0 auto;
     }
   }
 }
@@ -140,6 +138,12 @@ button {
   }
 
   &__item {
+    
+    &--login {
+      display: inline;
+      color: #888c91;
+    }
+
     &::before {
       content: "/";
       color: #222933;
@@ -158,7 +162,7 @@ button {
         content: "";
       }
     }
-    
+
     &:last-child {
       color: #888c91;
     }

@@ -24,9 +24,21 @@
 
         <ul class="menu__list">
 
+          <li class="menu__item menu__item--adapt">
+            <a class="menu__link" href="login.html">
+              Sing in
+            </a>
+          </li>
+
+          <li class="menu__item menu__item--adapt">
+            <a class="menu__link" href="#">
+              Sing up
+            </a>
+          </li>
+
           <li class="menu__item">
             <a class="menu__link" href="index.html">
-              Home<span>+</span>
+              Home
             </a>
           </li>
 
@@ -44,7 +56,7 @@
 
           <li class="menu__item">
             <a class="menu__link" href="#">
-              Pages<span>+</span>
+              Pages
             </a>
           </li>
 
@@ -95,9 +107,9 @@
           <span class="menu-nav__line menu-nav__line--user"></span>
 
           <a class="menu-nav__link menu-nav__link--user" href="#">
-          
+
             Sing up
-          
+
           </a>
 
         </div>
@@ -105,8 +117,20 @@
         <button class="menu-nav__btn menu-nav__btn--find" href="#">
 
           <svg class="menu-nav__find">
-            <use xlink:href="#img-find"></use>
+            <use xlink:href="images/sprite.svg#bg-find"></use>
           </svg>
+
+        </button>
+
+        <button class="menu-nav__btn menu-nav__btn--cart" href="#">
+
+          <svg class="menu-nav__cart menu-nav__cart--adapt">
+            <use xlink:href="images/sprite.svg#bg-cart"></use>
+          </svg>
+
+          <span class="menu-nav__num menu-nav__num--adapt">
+            0
+          </span>
 
         </button>
 
@@ -115,7 +139,7 @@
           <button class="menu-nav__btn menu-nav__btn--heart" href="#">
 
             <svg class="menu-nav__heart">
-              <use xlink:href="#img-heart"></use>
+              <use xlink:href="images/sprite.svg#heart2"></use>
             </svg>
 
 
@@ -129,7 +153,7 @@
           <button class="menu-nav__btn" href="#">
 
             <svg class="menu-nav__cart">
-              <use xlink:href="#img-bg-cart"></use>
+              <use xlink:href="images/sprite.svg#bg-cart"></use>
             </svg>
 
             <span class="menu-nav__num">
@@ -142,7 +166,7 @@
         <button class="menu-nav__popup">
 
           <svg class="menu-nav__ellipse">
-            <use xlink:href="#img-bg-ellipse"></use>
+            <use xlink:href="images/sprite.svg#bg-ellipse"></use>
           </svg>
 
         </button>
@@ -157,11 +181,11 @@
 
         <label for="sub-search" class="header__label">Search</label>
         <input id="sub-search" class="header__form-input" type="search" name="search" placeholder="Search" required>
-        
+
         <button class="header__form-btn" type="submit">Search</button>
 
       </form>
-      
+
     </div>
 
   </div>
@@ -170,7 +194,7 @@
 
   <main class="main">
 
-    <div class="top">
+    <div class="top top--login">
 
       <div class="container">
 
@@ -236,20 +260,24 @@
 
           </button>
 
-          <div class="modal__label-box">
+          <div class="modal__inner-box">
 
-            <label for="check-r" class="modal__label modal__label--box">
+            <div class="modal__label-box">
 
-              <input id="check-r" class="modal__input-checkbox" type="checkbox" name="checkbox">
+              <label for="check-r" class="modal__label modal__label--box">
 
-              Remember me
+                <input id="check-r" class="modal__input-checkbox" type="checkbox" name="checkbox">
 
-            </label>
+                Remember me
+
+              </label>
+
+            </div>
 
             <a class="modal__error" href="#">
-              
+
               Lost your password?
-            
+
             </a>
 
           </div>
@@ -307,10 +335,6 @@
       </div>
 
     </section>
-
-    <svg class="art">
-      <use xlink:href="images/sprite.svg#icons--about--Shape_1"></use>
-    </svg>
 
   </main>
 

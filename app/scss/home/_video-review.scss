@@ -12,9 +12,17 @@
   background-size: cover;
   object-fit: cover;
 
+  @include _768 {
+    height: 360px;
+  }
+
+  @include _560 {
+    height: 300px;
+  }
+
   &__btn {
     border-radius: 50%;
-    transform: box-shadow 0.3s;
+    transform: box-shadow 0.5s;
 
     &:hover {
       box-shadow: inset 0px 0px 15px 20px $white;
@@ -29,8 +37,6 @@
     display: block;
     max-width: 127px;
     max-height: 127px;
-    color: $default;
-    transition: color 0.3s;
 
     @include _1200 {
       transform: scale(0.8);
@@ -42,7 +48,7 @@
 
     &:hover {
       @include _560 {
-        color: azure;
+        fill: azure;
       }
     }
   }

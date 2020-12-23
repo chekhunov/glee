@@ -12,7 +12,7 @@ const browserSync = require("browser-sync").create();
 const { pipe } = require("stdout-stream");
 
 function svgSprites() {
-  return src(["app/images/**/*.svg"])
+  return src(["app/images/icons/**/*.svg", "!app/images/sprite.svg"]) // Э!Ээтоисключает отслеживание файла спрайт свг
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -109,12 +109,14 @@ function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/html/**/*"], html);
-  watch(["app/images/**/*.svg"], svgSprites);
+  watch(["app/images/icons/**/*.svg"], svgSprites);
 }
 
+//для вызова метода из терминала
 exports.styles = styles;
 exports.scripts = scripts;
 exports.html = html;
+exports.svgSprites = svgSprite;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;

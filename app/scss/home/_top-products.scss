@@ -7,8 +7,17 @@
     justify-content: space-between;
     margin-bottom: 45px;
 
+    @include _1200 {
+      justify-content: start;
+      // margin-right: -40px;
+    }
+
     @include _860 {
       justify-content: space-around;
+    }
+
+    @include _560 {
+      margin-right: 0;
     }
   }
 }
@@ -16,7 +25,15 @@
 .review {
   padding: 99px 0 73px;
 
+  @include _560 {
+    padding: 50px 0;
+  }
+
   &__inner {
     display: flex;
+
+    @include _560 {
+      flex-direction: column;
+    }
   }
 }

@@ -12,6 +12,14 @@
   border-radius: 10px;
   overflow: hidden;
 
+  @include _1200 {
+    margin-right: 40px;
+  }
+
+  @include _560 {
+    margin-right: 0;
+  }
+
   &:hover {
     box-shadow: $box-shadow;
   }
@@ -68,7 +76,7 @@
     margin: 8px 7px 7px;
     padding: 12px;
     background-color: $white;
-    color: $default;
+    fill: $default;
     border-radius: 50%;
     border: none;
     box-shadow: $box-shadow;
@@ -76,16 +84,19 @@
 
     &:hover {
       background-color: $default;
-      color: $white;
+      fill: $white;
     }
   }
 
   &__icon {
     width: 22px;
     height: 20px;
-  }
 
-  &__icon--heart {
-    margin-top: 2px;
+    &--heart {
+      margin-top: 2px;
+      &:hover {
+        margin-top: 1px;
+      }
+    }
   }
 }

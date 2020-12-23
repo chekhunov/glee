@@ -10,6 +10,11 @@ $(function () {
     $(".header__popup").toggleClass("header__popup--active");
   });
 
+  $(".modal__label-box").on("click", function (e) {
+    e.preventDefault();
+    $(".modal__label-box").toggleClass("modal__label-box--active");
+  });
+
   $(".slider-home__items").slick({
     dots: true,
     arrows: false,

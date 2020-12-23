@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include _1024 {
+      flex-direction: column;
+    }
+
     @include _860 {
       flex-direction: column;
       align-items: center;
@@ -14,10 +18,13 @@
   &__about {
     max-width: 300px;
 
-    @include _860 {
+    @include _1024 {
       max-width: 100%;
       margin-bottom: 50px;
       text-align: center;
+    }
+
+    @include _860 {
     }
   }
 
@@ -25,7 +32,7 @@
     margin-left: -5px;
     text-align: start;
 
-    @include _860 {
+    @include _1024 {
       text-align: center;
     }
   }
@@ -57,6 +64,7 @@
     width: 18px;
     height: 12px;
     margin-left: 20px;
+    fill: $white;
   }
 
   &__cards {
@@ -64,6 +72,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 100px;
+
+    @include _1024 {
+      margin-left: 0;
+      justify-content: space-around;
+    }
 
     @include _860 {
       flex-direction: column;
