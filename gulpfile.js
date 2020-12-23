@@ -27,7 +27,8 @@ function html() {
   return src([
     "app/html/pages/index.html",
     "app/html/pages/about.html",
-    "app/html/pages/login.html"
+    "app/html/pages/login.html",
+    "app/html/pages/terms.html"
   ])
     .pipe(
       fileinclude({
