@@ -1,0 +1,41 @@
+.card-recent {
+  position: relative;
+  display: flex;
+  margin-bottom: 25px;
+  z-index: 1;
+
+  @include _425 {
+    justify-content: space-evenly;
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    margin-right: 18px;
+    border: 3px solid #f2f2f2;
+    object-fit: contain;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #333333;
+    @extend %rubik-400;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
+    z-index: 2;
+  }
+}
+
+.star {
+  margin-left: -5px;
+}

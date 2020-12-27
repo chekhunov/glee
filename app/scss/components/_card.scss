@@ -39,8 +39,7 @@
     object-fit: contain;
   }
 
-  &__title,
-  &__price {
+  &__content {
     text-align: center;
   }
 
@@ -55,6 +54,11 @@
 
   &__price {
     color: $default;
+    text-align: center;
+  }
+
+  &__price-filshop {
+    display: none;
   }
 
   &__link-box {
@@ -98,5 +102,147 @@
         margin-top: 1px;
       }
     }
+  }
+
+  &.card--list {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0 0;
+    border-radius: 0;
+
+    @include _860 {
+      flex-direction: column;
+    }
+
+    &:nth-child(n + 5) {
+      display: none;
+    }
+
+    .card__content-box,
+    .shop-star {
+      display: block;
+    }
+
+    .jq-ry-container > .jq-ry-group-wrapper {
+      margin-bottom: 20px;
+      margin-left: -5px;
+    }
+
+    .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
+      padding-right: 3px;
+    }
+
+    .card {
+      &__img-box {
+        height: 500px;
+        min-width: 370px;
+        margin-bottom: 0;
+        margin-right: 50px;
+        border: 3px solid #f2f2f2;
+
+        @include _1024 {
+          height: 360px;
+          min-width: 230px;
+        }
+
+        @include _860 {
+          height: 370px;
+          min-width: 100%;
+          margin-right: 0;
+        }
+
+        @include _560 {
+          height: 280px;
+          min-width: 100%;
+          margin-right: 0;
+        }
+
+        img {
+          width: 100%;
+          margin: 0 auto;
+          padding: 80px 35px;
+
+          @include _1024 {
+            padding: 40px 30px;
+          }
+
+          @include _560 {
+            padding: 10px 20px;
+          }
+        }
+      }
+
+      &__link-box {
+        display: none;
+      }
+
+      &__content {
+        padding: 10px;
+        text-align: left;
+      }
+
+      &__title,
+      &__price-filshop {
+        color: #333333;
+        @extend %rubik-400;
+      }
+
+      &__title {
+        padding: 0 0;
+        text-align-last: left;
+        font-size: 40px;
+      }
+
+      &__text {
+        padding: 15px 0 20px;
+        @extend %rubik-400;
+      }
+
+      &__price {
+        font-size: 0;
+      }
+
+      &__price-filshop {
+        display: block;
+        margin-top: -20px;
+        font-size: 30px;
+      }
+
+      &__btn-box {
+        display: flex;
+      }
+
+      &__content-btn {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border: none;
+        fill: $default;
+        background-color: $white;
+        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+        &:hover {
+          box-shadow: $box-shadow;
+        }
+
+        &--active {
+          fill: $white;
+          background-color: $default;
+        }
+      }
+
+      &__icon {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .shop-star {
+    display: none;
+  }
+
+  &__content-box {
+    display: none;
   }
 }

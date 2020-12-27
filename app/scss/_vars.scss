@@ -52,6 +52,24 @@ $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
   font-weight: 700;
 }
 
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%checkbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: $title;
+  border-radius: 5px;
+  @extend %rubik-400;
+}
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

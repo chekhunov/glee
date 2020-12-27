@@ -1,11 +1,8 @@
 .general-info {
-  padding: 120px 0;
+  padding: 0 0 120px;
 
   @include _1200 {
     padding: 0 0 60px;
-  }
-
-  @include _560 {
   }
 
   &__inner {
@@ -23,17 +20,20 @@
   }
 
   &__img {
-    --ratio: 680 / 570;
-    width: 100%;
-    max-width: 100%;
-    height: calc(100vw * var(--ratio));
-    max-height: var(--ratio);
+    
+    min-width: 570px;
+    height: 680px;
     margin-right: 40px;
     background-position: center;
     background-size: cover;
     object-fit: cover;
 
     @include _1200 {
+      --ratio: 680 / 570;
+      max-width: 100%;
+      min-width: 0;
+      height: calc(100vw * var(--ratio));
+      max-height: var(--ratio);
       margin-right: 0;
     }
 

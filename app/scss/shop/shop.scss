@@ -1,0 +1,119 @@
+.shop {
+  margin-bottom: 120px;
+
+  @include _560 {
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include _425 {
+      flex-direction: column;
+    }
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+
+    .card {
+      margin-left: 30px;
+
+      @include _560 {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__filter-buttons {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    text-align: start;
+  }
+
+  &__filter-title {
+    padding-right: 10px;
+    font-size: 16px;
+    color: $title;
+    @extend %rubik-400;
+  }
+
+  &__filter-btn {
+    margin-left: 15px;
+    padding: 5px;
+    line-height: 0;
+    background-color: transparent;
+    border: 1px solid $default;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+
+    &.shop__filter-btn--active {
+      .shop {
+        &__icon-btn {
+          fill: $links;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $title;
+    }
+  }
+
+  &__icon-btn {
+    fill: $default;
+    width: 18px;
+    height: 18px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include _1200 {
+      justify-content: space-evenly;
+      padding-left: 40px;
+    }
+
+    @include _425 {
+      padding-left: 0;
+    }
+  }
+}
+
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  background-color: $default;
+  box-shadow: 0 0 13px 0 rgba(90, 90, 90, 0.2);
+}
+
+.irs--flat .irs-handle > i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  top: 6px;
+  height: 4px;
+  background-color: $default;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.irs--flat .irs-line {
+  top: 7px;
+  height: 3px;
+  background-color: #c2d2db;
+}
