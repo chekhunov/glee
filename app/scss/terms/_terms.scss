@@ -1,0 +1,26 @@
+.personal-info {
+  color: $title;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+
+    @extend %rubik-500;
+  }
+
+  &__list {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    list-style: decimal-leading-zero;
+    @extend %rubik-400;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    @extend %rubik-400;
+  }
+}

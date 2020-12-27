@@ -12,7 +12,7 @@ const browserSync = require("browser-sync").create();
 const { pipe } = require("stdout-stream");
 
 function svgSprites() {
-  return src(["app/images/**/*.svg"])
+  return src(["app/images/icons/**/*.svg", "!app/images/sprite.svg"]) // Э!Ээтоисключает отслеживание файла спрайт свг
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -27,7 +27,9 @@ function html() {
   return src([
     "app/html/pages/index.html",
     "app/html/pages/about.html",
-    "app/html/pages/login.html"
+    "app/html/pages/login.html",
+    "app/html/pages/terms.html",
+    "app/html/pages/shop.html"
   ])
     .pipe(
       fileinclude({
@@ -67,6 +69,8 @@ function scripts() {
     "node_modules/slick-carousel/slick/slick.js",
     "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
     "node_modules/mixitup/dist/mixitup.js",
+    "node_modules/rateyo/src/jquery.rateyo.js",
+    "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "app/js/jquery.liTextLength.js",
     "app/js/jquery.clamp.js",
     "app/js/main.js",
@@ -109,12 +113,14 @@ function watching() {
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/html/**/*"], html);
-  watch(["app/images/**/*.svg"], svgSprites);
+  watch(["app/images/icons/**/*.svg"], svgSprites);
 }
 
+//для вызова метода из терминала
 exports.styles = styles;
 exports.scripts = scripts;
 exports.html = html;
+exports.svgSprites = svgSprite;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;

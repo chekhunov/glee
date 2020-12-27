@@ -1,0 +1,26 @@
+.filter-price {
+  &__form {
+    margin-top: -15px;
+  }
+  &__label {
+    font-size: 0;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $title;
+    @extend %rubik-400;
+  }
+
+  &__from,
+  &__to {
+    &::before {
+      content: "$";
+    }
+    &::after {
+      content: ".00";
+    }
+  }
+}

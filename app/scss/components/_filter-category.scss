@@ -1,0 +1,33 @@
+.filter-category {
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 0;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked + .filter-category__checkbox {
+      background-color: #edf1f4;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 8px;
+      height: 10px;
+      margin-top: 6px;
+      background-image: url("../images/sprite.svg#news-arrow");
+      background-repeat: no-repeat;
+      fill: $title;
+    }
+  }
+}

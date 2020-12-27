@@ -4,7 +4,20 @@
   align-items: center;
   text-align: center;
   margin-top: 145px;
+  margin-bottom: 115px;
   background-color: #edf1f4;
+
+  @include _560 {
+    margin-bottom: 50px;
+  }
+
+  &--login {
+    margin-bottom: 115px;
+
+    @include _560 {
+      margin-bottom: 50px;
+    }
+  }
 
   &__title {
     margin-top: -10px;

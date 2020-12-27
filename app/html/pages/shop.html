@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Glee | SHOP</title>
+</head>
+
+<body>
+
+  @@include('../components/_header.html')
+
+  <main class="main">
+
+    <div class="top">
+
+      <div class="container">
+
+        <h3 class="top__title">
+
+          Product list
+
+        </h3>
+
+        <div class="breadcrumbs">
+
+          <ul class="breadcrumbs__list">
+
+            <li class="breadcrumbs__item">
+
+              <a class="breadcrumbs__link" href="index.html">
+                Home
+              </a>
+
+            </li>
+
+            <li class="breadcrumbs__item breadcrumbs__item--login">
+
+              <span class="breadcrumbs__link" href="#">
+                Product list
+              </span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <section class="shop">
+
+      <div class="container">
+
+        <div class="shop__inner">
+
+          <div class="filter shop__filters">
+
+            @@include('../components/_filter-category.html')
+
+            @@include('../components/_filter-price.html')
+
+            @@include('../components/_filter-brand.html')
+
+            @@include('../components/_filter-recent.html')
+
+          </div>
+
+          <div class="shop__products">
+
+            <div class="shop__filter-buttons">
+
+              <span class="shop__filter-title">
+
+                View
+
+              </span>
+
+              <button class="shop__filter-btn shop__filter-btn--active button-grid">
+
+                <svg class="shop__icon-btn">
+                  <use xlink:href="images/sprite.svg#filter-grid"></use>
+                </svg>
+
+              </button>
+
+              <button class="shop__filter-btn button-list">
+
+                <svg class="shop__icon-btn">
+                  <use xlink:href="images/sprite.svg#filter-list"></use>
+                </svg>
+
+              </button>
+
+            </div>
+
+            <div class="shop__wrapper">
+
+              @@include('../components/_card-shop.html')
+
+            </div>
+
+            @@include('../components/_pagination.html')
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    @@include('../components/_partners.html')
+
+  </main>
+
+  @@include('../components/_footer.html')
+
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

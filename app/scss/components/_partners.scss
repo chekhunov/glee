@@ -5,6 +5,13 @@
   @include _1200 {
     flex-flow: wrap;
     margin-right: 0;
+    padding-top: 40px;
+    padding-bottom: 0;
+    background-color: #fef7f0;
+  }
+
+  @include _560 {
+    margin-bottom: 50px;
   }
 
   &__list {

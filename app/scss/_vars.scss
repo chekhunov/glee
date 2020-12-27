@@ -1,9 +1,9 @@
 $white: #ffffff;
+$black: #000000;
 $links: #7b7b7b; //сылки
 $default: #a3bbc8; //шрифт
 $title: #243f4d; // заголовки
 $bg: #fef7f0; // темные места фона
-$black: #000000;
 $outline-slider: #fcd7b6;
 $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 
@@ -50,6 +50,24 @@ $box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
 %rubik-700 {
   font-family: "Rubik-Bold", sans-serif;
   font-weight: 700;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+%checkbox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: $title;
+  border-radius: 5px;
+  @extend %rubik-400;
 }
 
 @function max($numbers...) {

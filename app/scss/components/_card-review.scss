@@ -11,8 +11,25 @@
   padding: 82px 0;
   background-color: #feefe2;
 
+  @include _1200 {
+    padding: 10px 0;
+  }
+
+  @include _560 {
+    max-width: 100%;
+    min-height: 300px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 30px;
+    flex-direction: column;
+  }
+
   &:not(:last-child) {
     margin-right: 30px;
+
+    @include _560 {
+      margin-right: 0;
+    }
   }
 
   &__img {
@@ -21,18 +38,38 @@
     margin: -182px 10px 0 10px;
     object-fit: cover;
 
+    @include _1200 {
+      max-height: 250px;
+      margin-top: 0;
+      margin-left: -40px;
+      margin-right: 50px;
+      margin-bottom: 20px;
+    }
+
     @include _860 {
-      max-width: 165px;
-      max-height: 200px;
+      max-width: 100px;
+      max-height: 160px;
+      margin-right: 0;
     }
 
     @include _560 {
-      display: none;
+      margin-left: 0;
     }
 
     &--indent {
       margin-top: -177px;
-      padding: 0 50px 0 60px;
+      padding: 0 40px 0 0;
+
+      @include _1200 {
+        margin-top: 0;
+        padding-right: 20px;
+      }
+
+      @include _560 {
+        margin-right: 42px;
+        padding: 0;
+        padding-right: 0;
+      }
     }
   }
 
@@ -42,9 +79,19 @@
     padding: 10px 10px;
     color: $title;
 
+    @include _1200 {
+      max-width: 250px;
+      margin-left: -20px;
+    }
+
+    @include _860 {
+      max-width: 200px;
+      margin-left: 0;
+    }
+
     @include _560 {
-      height: 260px;
-      overflow-x: hidden;
+      max-width: 300px;
+      text-align: center;
     }
   }
 

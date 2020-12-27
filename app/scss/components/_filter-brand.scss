@@ -1,0 +1,24 @@
+.filter-brand {
+  &__label {
+    font-size: 0;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked + .filter-brand__checkbox {
+      background-color: #edf1f4;
+    }
+  }
+
+  &__checkbox {
+    margin-top: -20px;
+    @extend %checkbox;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: $title;
+    @extend %rubik-400;
+  }
+}
