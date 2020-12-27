@@ -195,7 +195,14 @@
       }
 
       &__text {
-        padding: 15px 0 20px;
+        padding: 15px 0 10px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        max-height: 135px;
         @extend %rubik-400;
       }
 
@@ -211,6 +218,7 @@
 
       &__btn-box {
         display: flex;
+        padding-top: 10px;
       }
 
       &__content-btn {
