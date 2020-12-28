@@ -248,6 +248,7 @@ Thumbs.db
 *.swp
 
 # from0to1
+.temp/
 .idea/
 .idea/*
 .history/
