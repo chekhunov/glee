@@ -249,6 +249,7 @@ Thumbs.db
 
 # from0to1
 .temp/
+.temp/*
 .idea/
 .idea/*
 .history/
